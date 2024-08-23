@@ -16,9 +16,9 @@ body{
     overflow-x: hidden;
 }
 
-section:first-of-type{
+.top{
     position: relative;
-    top: 80px;
+    padding-top: 70px;
 }
 
 p{
@@ -28,6 +28,20 @@ p{
 h3{
     font-size: 24px;
     margin-bottom: 32px;
+}
+
+body >h1{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    padding-top: 100px !important;
+}
+
+body >h2{
+    margin-top: 0px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
 }
 
 .btn-container{
@@ -157,7 +171,7 @@ header nav ul li a:hover::after{
 }
 
 section{
-    padding: 40px 5% 80px;
+    padding: 40px 5%;
     position: relative;
 }
 
@@ -169,6 +183,10 @@ section{
 
 .flex >div{
 width: 47%;
+}
+
+section.hero{
+    padding-top: 110px;
 }
 
 section.hero img {
@@ -187,6 +205,12 @@ section.hero h1{
     width: 25%;
     padding: 10px;
     height: 300px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
   
 .row:after {
