@@ -12,6 +12,10 @@
     background-color: unset;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 section:first-of-type{
     position: relative;
     top: 80px;
@@ -27,6 +31,35 @@ p{
 
 .btn-container .btn{
     margin-right: 16px;
+}
+
+.observe >div{
+    transition: 0.3s;
+    filter: blur(6px);
+    opacity: 0;
+}
+
+.observe.show >div{
+    filter: blur(0px);
+    opacity: 1;
+}
+
+.observe >div:first-of-type{
+    position: relative;
+    left: -50%;
+}
+
+.observe.show >div:first-of-type{
+    left: 0px;
+}
+
+.observe >div:last-of-type{
+    position: relative;
+    right: -50%;
+}
+
+.observe.show >div:last-of-type{
+    right: 0px;
 }
 
 header{
@@ -138,3 +171,18 @@ section.hero h1{
     font-weight: 800;
     margin-bottom: 32px;
 }
+
+.column {
+    float: left;
+  width: 25%;
+  padding: 10px;
+  height: 300px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
