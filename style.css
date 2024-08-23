@@ -200,37 +200,56 @@ section.hero h1{
     margin-bottom: 32px;
 }
 
-.column {
-    float: left;
-    width: 25%;
-    padding: 10px;
-    height: 300px;
-}
-
-.row{
+.flex-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    flex-wrap: nowrap;
+  }
   
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+  .flex-container > div {
+    width: 100px;
+    margin: auto;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
 
-.bundlepack {
-    background-color: black;
+  .book-button {
+    background-color: rgb(0, 153, 255);
     color: white;
     border: none;
     height: 40px;
-    width: 110px;
+    width: 90px;
+    font-size: 15px;
+    border-radius: 6px;
     cursor: pointer;
-}
+  }
+
 
 .flex img{
     width: 40vw;
     height: auto;
     border-radius: 16px;
 }
-  
+
+section.map{
+    padding-top: 16px;
+}
+
+iframe.map{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/1;
+    border-radius: 16px;
+    box-shadow: 0px 0px 10px 4px #0000001f;
+}
+
+.map.observe iframe{
+    filter: blur(6px);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.map.observe.show iframe{
+    filter: blur(0px);
+    opacity: 1;
+}
