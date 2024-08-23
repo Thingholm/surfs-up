@@ -25,6 +25,11 @@ p{
     margin-bottom: 16px;
 }
 
+h3{
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
 .btn-container{
     margin-top: 32px;
 }
@@ -152,13 +157,18 @@ header nav ul li a:hover::after{
 }
 
 section{
-    padding: 40px 5%;
+    padding: 40px 5% 80px;
+    position: relative;
 }
 
 .flex{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.flex >div{
+width: 47%;
 }
 
 section.hero img {
@@ -174,15 +184,29 @@ section.hero h1{
 
 .column {
     float: left;
-  width: 25%;
-  padding: 10px;
-  height: 300px;
-  }
+    width: 25%;
+    padding: 10px;
+    height: 300px;
+}
   
-  /* Clear floats after the columns */
-  .row:after {
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
+
+.bundlepack {
+    background-color: black;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 110px;
+    cursor: pointer;
+}
+
+.flex img{
+    width: 40vw;
+    height: auto;
+    border-radius: 16px;
+}
   
