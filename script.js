@@ -22,6 +22,7 @@ function loadHeader() {
     .then(response => response.text())
     .then(data => {
         document.getElementById('header').innerHTML = data;
+        findCurrentUrl();
     })
     .catch(error => console.error('Error loading header:', error));
 }
@@ -29,3 +30,20 @@ function loadHeader() {
 Array.from(document.getElementsByClassName("observe")).forEach(target => {
     observer.observe(target);
 });
+
+function findCurrentUrl(){
+    const pathname = window.location.pathname;
+    switch(pathname){
+        case "/om-os.html":
+            document.getElementById("about").classList.add("current");
+            break;
+        case "/produkter.html":
+            document.getElementById("products").classList.add("current");
+            break;
+        case "/lokationer.html":
+            document.getElementById("locations").classList.add("current");
+            break;
+        default:
+            break;
+    }
+}
