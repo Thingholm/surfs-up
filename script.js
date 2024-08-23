@@ -1,7 +1,7 @@
 loadHeader();
 
 const interSectionObserverOptions = {
-    root: document.querySelector("body"),
+    root: null,
     rootMargin: "0px",
     threshold: 0.2
 }
