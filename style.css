@@ -105,7 +105,7 @@ header nav ul{
 }
 
 header nav ul li:not(:last-of-type){
-    margin-right: 100px;
+    margin-right: 72px;
 }
 
 header nav ul li a{
@@ -313,4 +313,51 @@ iframe.map{
 .map.observe.show iframe{
     filter: blur(0px);
     opacity: 1;
+}
+
+.collapsible-container{
+    box-shadow: 0px 0px 5px 2px #00000017;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    padding: 8px 16px;
+}
+
+.faq {
+   
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+}
+
+.faq.active span{
+    color: #00a6fb;
+}
+.faq span{
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.faq img{
+    width: auto !important;
+    height: 12px !important;
+    transition: 0.25s;
+    
+}
+.faq + div{
+    display: none;
+}
+.faq.active img{
+    transform: rotate(-180deg);
+}
+
+.faq.active + div{
+    margin-top: 16px;
+    display: block;
 }

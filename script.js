@@ -43,7 +43,20 @@ function findCurrentUrl(){
         case "/lokationer.html":
             document.getElementById("locations").classList.add("current");
             break;
+        case "/faq.html":
+            document.getElementById("faq").classList.add("current");
+            break;
+        case "/kontakt.html":
+            document.getElementById("contact").classList.add("current");
+            break;
         default:
             break;
     }
 }
+
+var coll = Array.from(document.getElementsByClassName("faq"));
+coll.forEach(i => {
+    i.addEventListener("click",function(){
+        this.classList.toggle("active")
+    });
+})
