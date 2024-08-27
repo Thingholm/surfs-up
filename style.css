@@ -21,6 +21,7 @@ font-size: 20px;
 box-shadow: -12px 2px 92px -26px rgba(0,0,0,0.32);
 -webkit-box-shadow: -12px 2px 92px -26px rgba(0,0,0,0.32);
 -moz-box-shadow: -12px 2px 92px -26px rgba(0,0,0,0.32);
+z-index: 1;
 
 }
 
@@ -85,12 +86,12 @@ header img{
     -moz-box-shadow: 8px 72px 114px -31px rgba(0,0,0,0.94);
 }
 div.om-os{
-display: flex;
-margin: 10px;
-justify-content: space-between;
-align-items: center;
-}
-
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+    }
+    
   
 
 div.om-ostext{
@@ -110,19 +111,39 @@ div.boards img{
   border-radius: 15px;
   
 }
-#boards-container {
-  overflow: hidden;
-  position: relative;
-  height: 400px;
-  width: auto;
-  border-radius: 15px;
-}
 
 #sliding-image {
   position: absolute;
-  right: 100% ; /* Start off-screen to the left */
-  transition: 0s ease-in-out !important; /* Slide-in effect */
+  left: -100%; /* Start off-screen to the left */
+  transition: 1s ease-in-out; /* Slide-in effect */
+  height: 400px;
+  width: auto;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  justify-content: space-between;
+    align-items: center;
+    display: flex;
 }
+
+#sliding-image.show{
+    left: 0px;
+}
+
+#sliding-image1 {  
+    position: absolute;
+  height: 400px;
+  width: auto;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+
+
 /* .hover-2 {
   --c: #1095c1; 
   --b: .1em;    
