@@ -1,6 +1,6 @@
 * {
 margin:0px 0px;
-box-sizing:0px;
+box-sizing: border-box;
 padding:0px 0px;
 color:black;
 text-decoration: none;
@@ -8,6 +8,9 @@ text-decoration: none;
 }
 header {
 display: flex;
+position: fixed;
+width: 100%;
+top: 0;
 justify-content: space-between;
 font-weight: bold;
 align-items: center;
@@ -18,28 +21,36 @@ font-size: 20px;
 box-shadow: -12px 2px 92px -26px rgba(0,0,0,0.32);
 -webkit-box-shadow: -12px 2px 92px -26px rgba(0,0,0,0.32);
 -moz-box-shadow: -12px 2px 92px -26px rgba(0,0,0,0.32);
+
 }
 
-header div {
-    --b: 0.1em;   /* the thickness of the line */
-  --c: #1095c1; /* the color */
+body{
+    padding-top:80px;
+}
+
+header div:not(.booking, .logo){
+    --c: orangered; /* the color */
+  --s: .15em;
   
-  color: #0000;
-  padding-block: var(--b);
+  line-height:1.1em;
+  padding-bottom: calc(2.1*var(--s));
   background: 
-    linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
-    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
-  -webkit-background-clip: text,padding-box;
-          background-clip: text,padding-box;
-  transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+    conic-gradient(from 135deg at top,var(--c) 90deg,#0000 0) 
+      left 0 bottom var(--s)/calc(2*var(--s)) var(--s) repeat-x,
+    conic-gradient(from -45deg at bottom,var(--c) 90deg,#0000 0) 
+      left var(--s) bottom 0/calc(2*var(--s)) var(--s) repeat-x;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0) 0/var(--_p,0%) padding-box no-repeat;
+  transition: .5s;
 }
-header div:hover{
-    /* color: orangered; */
-    
 
-  --_p: 100%;
-  --_s: .3s;
-    
+header div:hover{
+    --_p: 100%;
+}
+
+header div a:hover{
+    color: orangered;
 }
 
 
@@ -62,6 +73,7 @@ header div:not(.logo){
 
 header div a{
     padding: 20px;
+    transition: 0.3s;
 }
 
 header img{
@@ -79,6 +91,8 @@ justify-content: space-between;
 align-items: center;
 }
 
+  
+
 div.om-ostext{
     margin: 0px 30px;
 }
@@ -91,11 +105,24 @@ text-align: justify;
 }
 
 div.boards img{
-    height: 400px;
-    width: auto;
-    border-radius: 15px;
+  height: 400px;
+  width: auto;
+  border-radius: 15px;
+  
 }
-    
+#boards-container {
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+  width: auto;
+  border-radius: 15px;
+}
+
+#sliding-image {
+  position: absolute;
+  right: 100% ; /* Start off-screen to the left */
+  transition: 0s ease-in-out !important; /* Slide-in effect */
+}
 /* .hover-2 {
   --c: #1095c1; 
   --b: .1em;    
