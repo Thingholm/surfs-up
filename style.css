@@ -439,3 +439,78 @@ form >div{
 .contact-bg-container h1{
     font-weight: 700;
 }
+
+.progress-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10%;
+    padding-top: 100px;
+    padding-bottom: 48px;
+}
+
+.progress-container div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.progress-container div:not(:last-of-type)::after{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 16vw;
+    left: calc(50% + 24px);
+    border-radius: 99px;
+    top: 14px;
+    background-color: #000934;
+}
+
+.progress-container div:not(:last-of-type).current::before{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 12vw;
+    left: calc(50% + 24px);
+    border-radius: 10px 0px 0px 10px;
+    top: 14px;
+    background-color: #ED5101;
+    z-index: 1;
+}
+
+.progress-container div.checked svg *{
+    stroke: #1e961c;
+}
+
+.progress-container div.checked p{
+    color: #1e961c;
+}
+
+.progress-container div.checked::after{
+    background-color: #1e961c;
+}
+
+.progress-container div.current svg *{
+    stroke: #ED5101;
+}
+
+.progress-container div.current p{
+    color: #ED5101;
+}
+
+.progress-container div svg{
+    height: 28px;
+    width: 28px;
+    margin-bottom: 8px;
+}
+
+.progress-container div p{
+    margin-bottom: 0px;
+    font-size: 14px;
+    position: absolute;
+    top: 34px;
+    text-wrap: nowrap;
+}
