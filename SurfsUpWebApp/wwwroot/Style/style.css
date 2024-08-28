@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    color: #061563;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border: none;
+    background-color: unset;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.top{
+    position: relative;
+    padding-top: 70px;
+}
+
+p{
+    margin-bottom: 16px;
+}
+
+h3{
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+body >h1, body >div >h1{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    padding-top: 100px !important;
+}
+
+body >h1{
+    margin-bottom: 32px;
+}
+
+body > h2{
+    margin-top: 0px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.btn-container{
+    margin-top: 32px;
+}
+
+.btn-container .btn{
+    margin-right: 16px;
+}
+
+.observe >div{
+    transition: 0.3s;
+    filter: blur(6px);
+    opacity: 0;
+}
+
+.observe.show >div{
+    filter: blur(0px);
+    opacity: 1;
+}
+
+.observe:not(.flex-container) >div:first-of-type{
+    position: relative;
+    left: -50%;
+}
+
+.observe.show:not(.flex-container) >div:first-of-type{
+    left: 0px;
+}
+
+.observe:not(.flex-container) >div:last-of-type{
+    position: relative;
+    right: -50%;
+}
+
+.observe.show:not(.flex-container) >div:last-of-type{
+    right: 0px;
+}
+
+header{
+    position: fixed;
+    box-sizing: border-box;
+    padding: 0px 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 2px #00000025;
+    z-index: 99999;
+}
+
+header a img {
+    height: 70px;
+    width: auto;
+}
+
+header nav {
+    width: 28%;
+}
+
+header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+header nav ul li a{
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 26px 0px;
+    transition: 0.2s;
+    position: relative;
+}
+
+header nav ul li a.current::before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 14px;
+    height: 6px;
+    width: 6px;
+    left: calc(50% - 3px);
+    border-radius: 99px;
+    background-color: #00a6fb;
+}
+
+header nav ul li a::after{
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #ED5101;
+    height: 2px;
+    width: 0%;
+    bottom: 0px;
+    left: 50%;
+    transition: 0.2s;
+}
+
+header nav ul li a:hover{
+    color: #ED5101;
+}
+
+header nav ul li a:hover::after{
+    width: 100%;
+    left: 0px;
+}
+
+.btn{
+    padding: 8px 24px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn:active{
+    transform: scale(0.9);
+}
+
+.btn.text.primary{
+    color: #00a6fb;
+}
+
+.btn.text.primary:hover{
+    color: #ED5101;
+}
+
+.btn.contained.primary{
+    background-color: #00a6fb;
+    color: #fff;
+    box-shadow: 0px 0px 5px 2px #00000016;
+}
+
+.btn.contained.primary:hover{
+    background-color: #ED5101;
+    color: #000934;
+}
+
+section{
+    padding: 40px 5%;
+    position: relative;
+}
+
+section:first-of-type{
+    padding-top: 0px;
+}
+
+.flex{
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex >div{
+width: 47%;
+}
+
+section.hero{
+    padding-top: 110px;
+}
+
+section.hero img {
+    height: 70vh;
+    width: 100%;
+    border-radius: 16px;
+}
+
+section.hero h1{
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 32px;
+}
+
+section:not(.flex-container) img{
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    /* margin-top: 16px; */
+}
+
+.flex-container > div {
+    width: 22%;
+    left: -200px;
+    position: relative;
+}
+
+.flex-container > div > div {
+    height: 580px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    text-align: center;
+    line-height: 24px;
+    font-size: 30px;
+    box-shadow: 0px 0px 10px 4px #00000025;
+    border-radius: 16px;
+    padding: 16px 12px;
+    position: relative;
+    transition: 0.2s ease-out;
+    background-color: #fff;
+}
+
+.flex-container >div:nth-of-type(1){
+    transition-delay: 0s;
+    z-index: 4;
+}
+
+.flex-container >div:nth-of-type(2){
+    transition-delay: 0.2s;
+    z-index: 3;
+}
+
+.flex-container >div:nth-of-type(3){
+    transition-delay: 0.4s;
+    z-index: 2;
+}
+
+.flex-container >div:nth-of-type(4){
+    transition-delay: 0.6s;
+    z-index: 1;
+}
+
+.flex-container.observe.show >div{
+    left: 0px;
+}
+
+.flex-container > div div:hover{
+    transform: scale(1.1);
+}
+
+.flex-container > div img{
+    height: 264px;
+    width: auto;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.flex-container > div h3{
+    margin-bottom: 16px;
+}
+
+.flex-container > div h2{
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.flex-container > div button{
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section.map{
+    padding-top: 16px;
+}
+
+iframe.map{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/1;
+    border-radius: 16px;
+    box-shadow: 0px 0px 10px 4px #0000000f;
+}
+
+.map.observe iframe{
+    filter: blur(6px);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.map.observe.show iframe{
+    filter: blur(0px);
+    opacity: 1;
+}
+
+.collapsible-container{
+    box-shadow: 0px 0px 5px 2px #00000017;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    padding: 8px 16px;
+}
+
+.faq {
+   
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+}
+
+.faq.active span{
+    color: #00a6fb;
+}
+.faq span{
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.faq img{
+    width: auto !important;
+    height: 12px !important;
+    transition: 0.25s;
+    
+}
+.faq + div{
+    display: none;
+}
+.faq.active img{
+    transform: rotate(-180deg);
+}
+
+.faq.active + div{
+    margin-top: 16px;
+    display: block;
+}
+
+.form-section{
+    margin: 0px 5%;
+    margin-top: 16px;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #ffffff52;
+    backdrop-filter: blur(6px);
+}
+
+input, textarea{
+    background-color: #f0f0f0;
+    width: 100%;
+    padding: 4px 12px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label{
+    margin-bottom: 6px;
+    width: 100%;
+    font-weight: 700;
+}
+
+textarea{
+    height: 100px;
+    resize: none;
+}
+
+form >div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#name .input-container{
+    width: 47%;
+}
+
+#contact .input-container:first-of-type{
+    width: 60%;
+}
+
+#contact .input-container:last-of-type{
+    width: 34%;
+}
+
+#message .input-container{
+    width: 100%;
+}
+
+#submit{
+    display: flex;
+    justify-content: center;
+}
+
+.input-container *{
+    display: block;
+}
+
+.contact-bg-container h1{
+    font-weight: 700;
+}
+
+.progress-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10%;
+    padding-top: 100px;
+    padding-bottom: 48px;
+}
+
+.progress-container div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.progress-container div:not(:last-of-type)::after{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 16vw;
+    left: calc(50% + 24px);
+    border-radius: 99px;
+    top: 14px;
+    background-color: #000934;
+}
+
+.progress-container div:not(:last-of-type).current::before{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 12vw;
+    left: calc(50% + 24px);
+    border-radius: 10px 0px 0px 10px;
+    top: 14px;
+    background-color: #ED5101;
+    z-index: 1;
+}
+
+.progress-container div.checked svg *{
+    stroke: #1e961c;
+}
+
+.progress-container div.checked p{
+    color: #1e961c;
+}
+
+.progress-container div.checked::after{
+    background-color: #1e961c;
+}
+
+.progress-container div.current svg *{
+    stroke: #ED5101;
+}
+
+.progress-container div.current p{
+    color: #ED5101;
+}
+
+.progress-container div svg{
+    height: 28px;
+    width: 28px;
+    margin-bottom: 8px;
+}
+
+.progress-container div p{
+    margin-bottom: 0px;
+    font-size: 14px;
+    position: absolute;
+    top: 34px;
+    text-wrap: nowrap;
+}

@@ -1,0 +1,207 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|c:\\users\\rasmu\\github\\surfs-up\\surfsupwebapp\\controllers\\faqcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|solutionrelative:controllers\\faqcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|c:\\users\\rasmu\\github\\surfs-up\\surfsupwebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|c:\\users\\rasmu\\github\\surfs-up\\surfsupwebapp\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|c:\\users\\rasmu\\github\\surfs-up\\surfsupwebapp\\views\\faq\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|solutionrelative:views\\faq\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|c:\\users\\rasmu\\github\\surfs-up\\surfsupwebapp\\controllers\\produktercontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|solutionrelative:controllers\\produktercontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|c:\\users\\rasmu\\github\\surfs-up\\surfsupwebapp\\controllers\\omoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|solutionrelative:controllers\\omoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|c:\\users\\rasmu\\github\\surfs-up\\surfsupwebapp\\controllers\\lokationercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|solutionrelative:controllers\\lokationercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|c:\\users\\rasmu\\github\\surfs-up\\surfsupwebapp\\controllers\\kontaktcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|solutionrelative:controllers\\kontaktcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|c:\\users\\rasmu\\github\\surfs-up\\surfsupwebapp\\wwwroot\\javascript\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|solutionrelative:wwwroot\\javascript\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|c:\\users\\rasmu\\github\\surfs-up\\surfsupwebapp\\wwwroot\\style\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|solutionrelative:wwwroot\\style\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|c:\\users\\rasmu\\github\\surfs-up\\surfsupwebapp\\views\\produkter\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FAD3192E-6CE5-4BD1-A2E8-1790327DF02F}|SurfsUpWebApp.csproj|solutionrelative:views\\produkter\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FaqController.cs",
+              "DocumentMoniker": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Controllers\\FaqController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FaqController.cs",
+              "ToolTip": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Controllers\\FaqController.cs",
+              "RelativeToolTip": "Controllers\\FaqController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T12:24:00.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Views\\Faq\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Faq\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Views\\Faq\\Index.cshtml",
+              "RelativeToolTip": "Views\\Faq\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-28T12:23:48.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LokationerController.cs",
+              "DocumentMoniker": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Controllers\\LokationerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LokationerController.cs",
+              "ToolTip": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Controllers\\LokationerController.cs",
+              "RelativeToolTip": "Controllers\\LokationerController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T12:11:14.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OmOsController.cs",
+              "DocumentMoniker": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Controllers\\OmOsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OmOsController.cs",
+              "ToolTip": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Controllers\\OmOsController.cs",
+              "RelativeToolTip": "Controllers\\OmOsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T12:02:04.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-28T11:25:14.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABYAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-28T12:21:25.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "KontaktController.cs",
+              "DocumentMoniker": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Controllers\\KontaktController.cs",
+              "RelativeDocumentMoniker": "Controllers\\KontaktController.cs",
+              "ToolTip": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Controllers\\KontaktController.cs",
+              "RelativeToolTip": "Controllers\\KontaktController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T12:24:14.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProdukterControllers.cs",
+              "DocumentMoniker": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Controllers\\ProdukterControllers.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProdukterControllers.cs",
+              "ToolTip": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Controllers\\ProdukterControllers.cs",
+              "RelativeToolTip": "Controllers\\ProdukterControllers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T12:24:33.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Views\\Produkter\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Produkter\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\Views\\Produkter\\Index.cshtml",
+              "RelativeToolTip": "Views\\Produkter\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-28T12:15:33.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "script.js",
+              "DocumentMoniker": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\wwwroot\\JavaScript\\script.js",
+              "RelativeDocumentMoniker": "wwwroot\\JavaScript\\script.js",
+              "ToolTip": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\wwwroot\\JavaScript\\script.js",
+              "RelativeToolTip": "wwwroot\\JavaScript\\script.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-08-28T11:58:01.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\wwwroot\\Style\\style.css",
+              "RelativeDocumentMoniker": "wwwroot\\Style\\style.css",
+              "ToolTip": "C:\\Users\\Rasmu\\github\\surfs-up\\SurfsUpWebApp\\wwwroot\\Style\\style.css",
+              "RelativeToolTip": "wwwroot\\Style\\style.css",
+              "ViewState": "AQIAABEBAAAAAAAAAAAAACEBAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-28T11:27:52.303Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

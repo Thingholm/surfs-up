@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surf's Up - Produkter</title>
+    <link rel="stylesheet" href="~/Style/style.css" asp-append-version="true">
+    <link rel="icon" href="~/Images/Skærmbillede 2024-08-23 092940.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/om-os" class="nav-item @(ViewContext.HttpContext.Request.Path == "/om-os" ? "current" : "")" id="about">Om os</a>
+                </li>
+                <li>
+                    <a href="/produkter" class="nav-item @(ViewContext.HttpContext.Request.Path == "/produkter" ? "current" : "")" id="products">Produkter</a>
+                </li>
+                <li>
+                    <a href="/lokationer" class="nav-item @(ViewContext.HttpContext.Request.Path == "/lokationer" ? "current" : "")" id="locations">Lokationer</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="/"><img src="images/Skærmbillede 2024-08-23 092940.png" alt="Surf's Up Logo"></a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/faq" class="nav-item @(ViewContext.HttpContext.Request.Path == "/faq" ? "current" : "")" id="faq">FAQ</a>
+                </li>
+                <li>
+                    <a href="/kontakt" class="nav-item @(ViewContext.HttpContext.Request.Path == "/kontakt" ? "current" : "")" id="contact">Kontakt</a>
+                </li>
+                <li>
+                    <button onclick="location.href='/booking';" class="btn contained primary">Book</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    @RenderBody()
+</body>
+<script src="~/JavaScript/script.js"></script>
+</html>
