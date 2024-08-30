@@ -9,7 +9,7 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Repositories\" />
-    <Folder Include="Views\Produkter\" />
+    <Folder Include="Views\Kategorier\" />
     <Folder Include="wwwroot\Images\" />
     <Folder Include="wwwroot\Style\" />
   </ItemGroup>
