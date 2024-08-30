@@ -9,47 +9,55 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SurfsUpWebApp
 build_property.RootNamespace = SurfsUpWebApp
-build_property.ProjectDir = \\Mac\Home\Desktop\Git\surfs-up\SurfsUpWebApp\
+build_property.ProjectDir = C:\Users\andy-\OneDrive\Skrivebord\VS code Andy\surfs up\surfs-up\SurfsUpWebApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = \\Mac\Home\Desktop\Git\surfs-up\SurfsUpWebApp
+build_property.MSBuildProjectDirectory = C:\Users\andy-\OneDrive\Skrivebord\VS code Andy\surfs up\surfs-up\SurfsUpWebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[//Mac/Home/Desktop/Git/surfs-up/SurfsUpWebApp/Views/Book/Index.cshtml]
+[C:/Users/andy-/OneDrive/Skrivebord/VS code Andy/surfs up/surfs-up/SurfsUpWebApp/Views/Book/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[//Mac/Home/Desktop/Git/surfs-up/SurfsUpWebApp/Views/Faq/Index.cshtml]
+[C:/Users/andy-/OneDrive/Skrivebord/VS code Andy/surfs up/surfs-up/SurfsUpWebApp/Views/Faq/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFxXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[//Mac/Home/Desktop/Git/surfs-up/SurfsUpWebApp/Views/Home/Index.cshtml]
+[C:/Users/andy-/OneDrive/Skrivebord/VS code Andy/surfs up/surfs-up/SurfsUpWebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[//Mac/Home/Desktop/Git/surfs-up/SurfsUpWebApp/Views/Kontakt/Index.cshtml]
+[C:/Users/andy-/OneDrive/Skrivebord/VS code Andy/surfs up/surfs-up/SurfsUpWebApp/Views/Kategorier/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2F0ZWdvcmllclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/andy-/OneDrive/Skrivebord/VS code Andy/surfs up/surfs-up/SurfsUpWebApp/Views/Kontakt/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29udGFrdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[//Mac/Home/Desktop/Git/surfs-up/SurfsUpWebApp/Views/Lokationer/Index.cshtml]
+[C:/Users/andy-/OneDrive/Skrivebord/VS code Andy/surfs up/surfs-up/SurfsUpWebApp/Views/Lokationer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9rYXRpb25lclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[//Mac/Home/Desktop/Git/surfs-up/SurfsUpWebApp/Views/OmOs/Index.cshtml]
+[C:/Users/andy-/OneDrive/Skrivebord/VS code Andy/surfs up/surfs-up/SurfsUpWebApp/Views/OmOs/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT21Pc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[//Mac/Home/Desktop/Git/surfs-up/SurfsUpWebApp/Views/Produkter/Index.cshtml]
+[C:/Users/andy-/OneDrive/Skrivebord/VS code Andy/surfs up/surfs-up/SurfsUpWebApp/Views/Produkter/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVrdGVyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[//Mac/Home/Desktop/Git/surfs-up/SurfsUpWebApp/Views/Shared/_Layout.cshtml]
+[C:/Users/andy-/OneDrive/Skrivebord/VS code Andy/surfs up/surfs-up/SurfsUpWebApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[//Mac/Home/Desktop/Git/surfs-up/SurfsUpWebApp/Views/_ViewStart.cshtml]
+[C:/Users/andy-/OneDrive/Skrivebord/VS code Andy/surfs up/surfs-up/SurfsUpWebApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/andy-/OneDrive/Skrivebord/VS code Andy/surfs up/surfs-up/SurfsUpWebApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
