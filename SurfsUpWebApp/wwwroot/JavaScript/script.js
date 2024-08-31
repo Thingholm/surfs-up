@@ -62,3 +62,28 @@ function updateSortQueryParam() {
 
     window.location.reload();
 }
+
+
+function incrementAmount(){
+    const url = new URL(window.location);
+    let amount = parseInt(url.searchParams.get('amount') ?? 1);
+
+    url.searchParams.set("amount", amount + 1);
+
+    document.getElementById("amount").innerHTML = amount + 1;
+
+    window.history.pushState({}, '', url);
+}
+
+function decrementAmount(){
+    const url = new URL(window.location);
+    let amount = parseInt(url.searchParams.get('amount') ?? 1);
+
+    if (amount > 1){
+        url.searchParams.set("amount", amount - 1);
+
+        document.getElementById("amount").innerHTML = amount - 1;
+    
+        window.history.pushState({}, '', url);
+    }
+}

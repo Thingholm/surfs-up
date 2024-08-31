@@ -4,9 +4,9 @@ using SurfsUpWebApp.Repositories;
 
 namespace SurfsUpWebApp.Controllers
 {
-    [Route("produkter")]
     public class ProductsController : Controller
     {
+        [Route("produkter")]
         public IActionResult Index(string? types, string? sortBy)
         {
             if (types == null)
@@ -38,6 +38,16 @@ namespace SurfsUpWebApp.Controllers
 
                 return View(products);
             }
+        }
+
+
+        [Route("produkter/produkt/{id}")]
+        public IActionResult Product(int id){
+            Product? product = ProductRepository.GetProductById(id);
+            if (product != null){
+                return View(product);
+            }
+            return View("Index");
         }
     }
 }

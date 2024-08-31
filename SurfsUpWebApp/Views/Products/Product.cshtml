@@ -1,0 +1,44 @@
+@{
+    string amountQuery = Context.Request.Query["amount"].ToString();
+    int amount = string.IsNullOrEmpty(amountQuery) ? 1 : int.Parse(amountQuery);
+}
+
+<section class="top flex">
+    <div>
+        <img src=@($"/Images/products/{Model.ImageUrl}") alt=@Model.Name>
+    </div>
+    <div class="product-info-container">
+        <h4>@Model.Type</h4>
+        <h1>@Model.Name</h1>
+        <p class="price">€@(Model.Price.ToString("N2")) <span>Inkl. moms</span></p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto architecto dicta a neque amet tenetur saepe earum ab, tempora totam dolor soluta sint ipsum quibusdam.</p>
+        <h5>Antal</h5>
+        <div class="amount-container">
+            <button class="btn text primary" onclick="decrementAmount()">-</button>
+            <p id="amount">@amount</p>
+            <button class="btn text primary" onclick="incrementAmount()">+</button>
+        </div>
+        <button class="btn contained primary add-to-cart">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            Læg i kurven
+        </button>
+        <h5>Specifikationer</h5>
+        <p>Mål: @Model.Length'x@(Model.Width)"x@(Model.Thickness)"</p>
+        <p>Volume: @Model.Volume liter</p>
+
+        <h5>Udstyr</h5>
+            @if (Model.Equipment.Count > 0)
+        {
+            <p>
+                @for (int i = 0; i < Model.Equipment.Count; i++)
+                {
+                    <span>@(i < Model.Equipment.Count - 1 ? @Model.Equipment[i] + ", " : @Model.Equipment[i] )</span>
+                }
+            </p>
+        }
+        else 
+        {
+            <p>Intet udstyr</p>
+        }
+    </div>
+</section>
