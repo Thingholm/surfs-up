@@ -11,7 +11,7 @@
         public string Type { get; set; }
         public double Price { get; set; }
         public List<string> Equipment { get; set; }
-
+        public string ImageUrl { get; set; }
     }
 }
         

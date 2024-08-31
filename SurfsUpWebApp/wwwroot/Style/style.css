@@ -161,6 +161,15 @@ header nav ul li a:hover::after{
     transition: 0.3s;
 }
 
+.btn svg{
+    height: 18px;
+    width: 18px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 5px;
+}
+
 .btn:hover{
     cursor: pointer;
 }
@@ -173,8 +182,18 @@ header nav ul li a:hover::after{
     color: #00a6fb;
 }
 
+.btn.text.primary svg *{
+    stroke: #00a6fb;
+    transition: 0.1s;
+}
+
+.btn.text.primary:hover svg *{
+    stroke: #ED5101;
+}
+
 .btn.text.primary:hover{
     color: #ED5101;
+    background-color: #f6f6f6;
 }
 
 .btn.contained.primary{
@@ -516,4 +535,101 @@ form >div{
     position: absolute;
     top: 34px;
     text-wrap: nowrap;
+}
+
+.products-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.filters-container{
+    width: 20%;
+}
+
+.filters-container p {
+    font-weight: 600;
+}
+
+.filters-container .input-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filters-container .input-container:hover label{
+    font-weight: 600;
+}
+
+.filters-container .input-container input{
+    width: fit-content;
+    padding: 4px 0px;
+}
+
+.filters-container .input-container label{
+    font-weight: 400;
+    padding: 4px 0px;
+    transition: 0.3s;
+}
+
+.sort-container{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.products-grid-container{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
+    justify-content: space-between;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+    border-radius: 12px;
+    box-sizing: border-box;
+    width: 100%;
+    transition: 0.3s;
+    margin-bottom: 48px;
+    overflow: hidden;
+    padding: 16px 16px;
+    border: solid 1px #00093419;
+}
+
+.product-container:hover{
+    box-shadow: 0px 0px 5px 1px #00000016;
+    transform: scale(1.02);
+}
+
+.product-container .img-container img {
+    height: 200px;
+    width: auto;
+
+    margin-bottom: 20px;
+}
+
+.product-container .type{
+    opacity: 0.4;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.product-container h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.product-container .price {
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.product-container button {
+    width: 100%;
 }
