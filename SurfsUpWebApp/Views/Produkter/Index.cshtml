@@ -1,49 +1,88 @@
-﻿<h1 class="top">Produkter</h1>
+﻿@{
+    string[] selectedTypes = Context.Request.Query["Types"].ToString()?.Split(",") ?? [""];
+    string sortBy = Context.Request.Query["SortBy"].ToString() ?? "popularity";
+}
+
+<h1 class="top">Produkter</h1>
 <section class="products-section">
     <div class="filters-container">
         <p>Filtrér</p>
         <div class="input-container">
-            <label for="shortboard">Shortboard</label>
-            <input type="checkbox" name="shortboard" id="shortboard">
+            <label for="Shortboard">Shortboard</label>
+            <input 
+                type="checkbox" 
+                name="Shortboard" 
+                id="Shortboard" 
+                @(selectedTypes.Contains("Shortboard") ? "checked" : "")
+            >
         </div>
         <div class="input-container">
-            <label for="funboard">Funboard</label>
-            <input type="checkbox" name="funboard" id="funboard">
+            <label for="Funboard">Funboard</label>
+            <input 
+                type="checkbox"     
+                name="Funboard" 
+                id="Funboard" 
+                @(selectedTypes.Contains("Funboard") ? "checked" : "")
+            >
         </div>
         <div class="input-container">
-            <label for="fish">Fish</label>
-            <input type="checkbox" name="fish" id="fish">
+            <label for="Fish">Fish</label>
+            <input 
+                type="checkbox"     
+                name="Fish" 
+                id="Fish" 
+                @(selectedTypes.Contains("Fish") ? "checked" : "")
+            >
         </div>
         <div class="input-container">
-            <label for="longboard">Longboard</label>
-            <input type="checkbox" name="longboard" id="longboard">
+            <label for="Longboard">Longboard</label>
+            <input 
+                type="checkbox"     
+                name="Longboard" 
+                id="Longboard" 
+                @(selectedTypes.Contains("Longboard") ? "checked" : "")
+            >
         </div>
         <div class="input-container">
-            <label for="sup">SUP</label>
-            <input type="checkbox" name="sup" id="shortboard">
+            <label for="SUP">SUP</label>
+            <input 
+                type="checkbox"     
+                name="SUP" 
+                id="SUP" 
+                @(selectedTypes.Contains("SUP") ? "checked" : "")
+            >
         </div>
     </div>
     <div>
         <div class="sort-container">
-            <select>
-                <option value="popularity" selected>Popularitet</option>
-            </select>
+            <div>
+                <label for="sort">Sortér efter: </label>
+                <select name="sort" id="sort" onchange="updateSortQueryParam()">
+                    <!option value="popularity" @(sortBy == "popularity" ? "selected" : "")>Popularitet</!option>
+                    <!option value="price-asc" @(sortBy == "price-asc" ? "selected" : "")>Pris (Stigende)</!option>
+                    <!option value="price-desc" @(sortBy == "price-desc" ? "selected" : "")>Pris (Faldende)</!option>
+                </select>
+            </div>
+            
         </div>
         <div class="products-grid-container">
-            @foreach(Product product in Model)
+            @if (Model.Count > 0)
             {
-                <div class="product-container">
-                    <div class="img-container">
-                        <img src=@($"/Images/products/{product.ImageUrl}") alt=@(product.Name) />
+                foreach(Product product in Model)
+                {
+                    <div class="product-container">
+                        <div class="img-container">
+                            <img src=@($"/Images/products/{product.ImageUrl}") alt=@(product.Name) />
+                        </div>
+                        <p class="type">@product.Type</p>
+                        <h4>@product.Name</h4>
+                        <p class="price">@($"€{product.Price}")</p>
+                        <button class="btn text primary">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                            Føj til kurv
+                        </button>
                     </div>
-                    <p class="type">@product.Type</p>
-                    <h4>@product.Name</h4>
-                    <p class="price">@($"€{product.Price}")</p>
-                    <button class="btn text primary">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                        Føj til kurv
-                    </button>
-                </div>
+                }
             }
         </div>
     </div>

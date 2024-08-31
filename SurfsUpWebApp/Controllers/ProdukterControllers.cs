@@ -7,16 +7,35 @@ namespace SurfsUpWebApp.Controllers
     [Route("produkter")]
     public class ProdukterController : Controller
     {
-        public IActionResult Index(string? type)
+        public IActionResult Index(string? types, string? sortBy)
         {
-            if (type == null)
+            if (types == null)
             {
-                List<Product> products = ProductRepository.GetAllProducts();
+                List<Product>? products = ProductRepository.GetAllProducts();
                 return View(products);
             }
             else
             {
-                List<Product> products = ProductRepository.GetProductsByType(type);
+                string[] typeList = types.Contains(",") ? types.Split(",") : [types];
+                List<Product>? products = ProductRepository.GetProductsByTypes(typeList);
+
+                if (sortBy != null && products != null){
+                    switch (sortBy)
+                    {
+                        case "popularity":
+                            products = products.OrderBy(p => p.Id).ToList();
+                            break;
+                        case "price-asc":
+                            products = products.OrderBy(p => p.Price).ToList();
+                            break;
+                        case "price-desc":
+                            products = products.OrderByDescending(p => p.Price).ToList();
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
                 return View(products);
             }
         }

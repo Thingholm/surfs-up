@@ -542,6 +542,10 @@ form >div{
     justify-content: space-between;
 }
 
+.products-section >div:last-of-type{
+    width: 75%;
+}
+
 .filters-container{
     width: 20%;
 }
@@ -583,6 +587,7 @@ form >div{
     display: grid;
     grid-template-columns: repeat(4, 23%);
     justify-content: space-between;
+    width: 100%;
 }
 
 .product-container {

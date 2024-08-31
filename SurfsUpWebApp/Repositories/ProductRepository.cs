@@ -147,14 +147,14 @@ namespace SurfsUpWebApp.Repositories
             if(product == null)
                 return;
 
-            Product productToUpdate = GetProductById(product.Id);
+            Product? productToUpdate = GetProductById(product.Id);
             if (productToUpdate == null)
                 return;
             productToUpdate = product;   
 
         }
 
-        public static Product GetProductById(int Id)
+        public static Product? GetProductById(int Id)
         {
             foreach (Product product in products)
             {
@@ -167,7 +167,7 @@ namespace SurfsUpWebApp.Repositories
          
         }
 
-        public static List<Product> GetAllProducts()
+        public static List<Product>? GetAllProducts()
         {
             if (products == null || products.Count < 1)
             {
@@ -178,14 +178,14 @@ namespace SurfsUpWebApp.Repositories
         }
 
 
-        public static List<Product> GetProductsByType(string type)
+        public static List<Product>? GetProductsByTypes(string[] types)
         {
-            if (type == null || products?.Any(p => p.Type == type) == null)
+            if (types == null || types.Length < 1 || products?.Any(p => types.Any(t => t == p.Type)) == null)
             {
                 return null;
             }
 
-            return products.Where(p => p.Type == type).ToList();
+            return products.Where(p =>  types.Any(t => t == p.Type)).ToList();
         }
 
 

@@ -15,7 +15,7 @@
                     <a href="/om-os" class="nav-item @(ViewContext.HttpContext.Request.Path == "/om-os" ? "current" : "")" id="about">Om os</a>
                 </li>
                 <li>
-                    <a href="/produkter" class="nav-item @(ViewContext.HttpContext.Request.Path == "/produkter" ? "current" : "")" id="products">Produkter</a>
+                    <a href="/kategorier" class="nav-item @(ViewContext.HttpContext.Request.Path == "/produkter" || ViewContext.HttpContext.Request.Path == "/kategorier" ? "current" : "")" id="products">Produkter</a>
                 </li>
                 <li>
                     <a href="/lokationer" class="nav-item @(ViewContext.HttpContext.Request.Path == "/lokationer" ? "current" : "")" id="locations">Lokationer</a>
