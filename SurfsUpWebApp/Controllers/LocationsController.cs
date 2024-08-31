@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace SurfsUpWebApp.Controllers
 {
     [Route("lokationer")]
-    public class LokationerController : Controller
+    public class LocationsrController : Controller
     {
         public IActionResult Index()
         {

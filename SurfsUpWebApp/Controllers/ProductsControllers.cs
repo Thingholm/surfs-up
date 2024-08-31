@@ -5,7 +5,7 @@ using SurfsUpWebApp.Repositories;
 namespace SurfsUpWebApp.Controllers
 {
     [Route("produkter")]
-    public class ProdukterController : Controller
+    public class ProductsController : Controller
     {
         public IActionResult Index(string? types, string? sortBy)
         {
