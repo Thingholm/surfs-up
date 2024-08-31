@@ -41,7 +41,7 @@ namespace SurfsUpWebApp.Controllers
         }
 
 
-        [Route("produkter/produkt/{id}")]
+        [Route("produkter/{id}")]
         public IActionResult Product(int id){
             Product? product = ProductRepository.GetProductById(id);
             if (product != null){
