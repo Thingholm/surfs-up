@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SurfsUpWebApp.Models;
 using SurfsUpWebApp.Repositories;
+using SurfsUpWebApp.Utils;
 
 namespace SurfsUpWebApp.Controllers
 {
@@ -41,10 +42,16 @@ namespace SurfsUpWebApp.Controllers
         }
 
 
-        [Route("produkter/{id}")]
-        public IActionResult Product(int id){
+        [Route("produkter/{id}/{name?}")]
+        public IActionResult Product(int id, string? name){
             Product? product = ProductRepository.GetProductById(id);
-            if (product != null){
+            if (product != null)
+            {
+                if (name == null)
+                {
+                    string formattedString = StringFormatter.GenerateUrlSlug(product.Name);
+                    return RedirectToAction("Product", new { id = id, name = formattedString });
+                }
                 return View(product);
             }
             return View("Index");
