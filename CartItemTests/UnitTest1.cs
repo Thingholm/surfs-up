@@ -24,7 +24,12 @@ namespace CartItemTests
                 Width = 21.0,
                 Thickness = 2.75,
                 Volume = 38.8,
-                Type = "Shortboard",
+                Type =             new ProductType
+                {
+                    Id = 1,
+                    Name = "Shortboard",
+                    ImageUrl = "category-1.jpg"
+                },
                 Price = 565.0,
                 Equipment = new List<string>() { "Leash", "finn", "padel", "pump" },
                 ImageUrl = "s326152794241300969_p345_i3_w5000.webp"
@@ -60,7 +65,12 @@ namespace CartItemTests
                 Width = 21.0,
                 Thickness = 2.75,
                 Volume = 38.8,
-                Type = "Shortboard",
+                Type =             new ProductType
+                {
+                    Id = 1,
+                    Name = "Shortboard",
+                    ImageUrl = "category-1.jpg"
+                },
                 Price = 565.0,
                 Equipment = new List<string>(),
                 ImageUrl = "s326152794241300969_p345_i3_w5000.webp"
@@ -100,7 +110,12 @@ namespace CartItemTests
                 Width = 21.0,
                 Thickness = 2.75,
                 Volume = 38.8,
-                Type = "Shortboard",
+                Type =             new ProductType
+                {
+                    Id = 1,
+                    Name = "Shortboard",
+                    ImageUrl = "category-1.jpg"
+                },
                 Price = 565.0,
                 Equipment = new List<string>(),
                 ImageUrl = "s326152794241300969_p345_i3_w5000.webp"
@@ -137,7 +152,12 @@ namespace CartItemTests
                 Width = 21.0,
                 Thickness = 2.75,
                 Volume = 38.8,
-                Type = "Shortboard",
+                Type =             new ProductType
+                {
+                    Id = 1,
+                    Name = "Shortboard",
+                    ImageUrl = "category-1.jpg"
+                },
                 Price = 565.0,
                 Equipment = new List<string>(),
                 ImageUrl = "s326152794241300969_p345_i3_w5000.webp"
@@ -184,7 +204,12 @@ namespace CartItemTests
                 Width = 21.0,
                 Thickness = 2.75,
                 Volume = 38.8,
-                Type = "Shortboard",
+                Type =             new ProductType
+                {
+                    Id = 1,
+                    Name = "Shortboard",
+                    ImageUrl = "category-1.jpg"
+                },
                 Price = 565.0,
                 Equipment = new List<string>(),
                 ImageUrl = "s326152794241300969_p345_i3_w5000.webp"
