@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SurfsUpWebApp.Models
 {
-    public class Type
+    public class ProductType
     {
         public int Id { get; set; }
         [Required]

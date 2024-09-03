@@ -1,3 +1,4 @@
+@using SurfsUpWebApp.Models;
 @section breadcrumb{
     <nav class="breadcrumb">
         <a
@@ -19,34 +20,25 @@
 <h1>Vælg kategori</h1>
 <section class="categories">
     <a 
-        asp-controller="Produkter" 
+        asp-controller="Products" 
         asp-action="Index"
     >
         <img src="~/Images/category-4.jpg" alt="Alle">
         <p>Alle</p>
     </a>
-    <a 
-        asp-controller="Produkter"
-        asp-action="Index"
-        asp-route-types="Shortboard"
-    >
-        <img src="~/Images/category-1.jpg" alt="ShortBoard">
-        <p>Shortboard</p>
-    </a>
-    <a 
-        asp-controller="Produkter"
-        asp-action="Index"
-        asp-route-types="Funboard"
-    >
-        <img src="~/Images/category-2.jpg" alt="Fun Board">
-        <p>Fun Board</p>
-    </a>
-    <a 
-        asp-controller="Produkter"
-        asp-action="Index"
-        asp-route-types="SUP"
-    >
-        <img src="~/Images/category-3.jpg" alt="SUP">
-        <p>SUP</p>
-    </a>
+    @if (Model != null )
+    {
+        foreach(ProductType ProductType in Model)
+        {   
+            <a
+                asp-controller="Products"
+                asp-action="Index"
+                asp-route-types=@(ProductType.Id)
+                >
+                <img src="@($"/Images/Category/{ProductType.ImageUrl}")"alt="@(ProductType.Name)"/>
+                <p>@ProductType.Name</p>
+            </a>
+
+        }
+    }
 </section>
