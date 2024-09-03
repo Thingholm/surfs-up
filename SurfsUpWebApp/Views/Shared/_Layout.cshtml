@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    string pathName = ViewContext.HttpContext.Request.Path.ToString().ToLower();
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,13 +16,13 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/om-os" class="nav-item @(ViewContext.HttpContext.Request.Path == "/om-os" ? "current" : "")" id="about">Om os</a>
+                    <a href="/om-os" class="nav-item @(pathName.Contains("/om-os") ? "current" : "")" id="about">Om os</a>
                 </li>
                 <li>
-                    <a href="/kategorier" class="nav-item @(ViewContext.HttpContext.Request.Path == "/produkter" || ViewContext.HttpContext.Request.Path == "/kategorier" ? "current" : "")" id="products">Produkter</a>
+                    <a href="/kategorier" class="nav-item @(pathName.Contains("/produkter") || pathName.Contains("/kategorier") || pathName.Contains("/produkt") ? "current" : "")" id="products">Produkter</a>
                 </li>
                 <li>
-                    <a href="/lokationer" class="nav-item @(ViewContext.HttpContext.Request.Path == "/lokationer" ? "current" : "")" id="locations">Lokationer</a>
+                    <a href="/lokationer" class="nav-item @(pathName.Contains("/lokationer") ? "current" : "")" id="locations">Lokationer</a>
                 </li>
             </ul>
         </nav>
