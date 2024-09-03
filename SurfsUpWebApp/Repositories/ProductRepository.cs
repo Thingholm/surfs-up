@@ -5,20 +5,25 @@ namespace SurfsUpWebApp.Repositories
     public class ProductRepository
     {
         private List<Product> products = new List<Product>();
+
         public void AddProduct(Product product)
         {
             products.Add(product);
         }
+
         public void Update(Product product)
         {
-            if(product == null)
+            if (product == null)
                 return;
 
             Product productToUpdate = GetProductById(product.Id);
             if (productToUpdate == null)
                 return;
-            productToUpdate = product;   
 
+            productToUpdate.Name = product.Name;
+            productToUpdate.Price = product.Price;
+            productToUpdate.Type = product.Type;
+           
         }
 
         public Product GetProductById(int Id)
@@ -36,12 +41,8 @@ namespace SurfsUpWebApp.Repositories
 
         public List<Product> GetAllProducts()
         {
-            foreach(Product product in products)
-            {
-                products.Add(product);
-                
-            }
-            return products;
+            
+            return new List<Product>(products);
         }
 
 

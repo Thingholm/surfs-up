@@ -9,9 +9,9 @@
         public double Thickness { get; set; }
         public double Volume { get; set; }
         public string Type { get; set; }
-        public double Price { get; set; }
+        public decimal Price { get; set; }
         public List<string> Equipment { get; set; }
 
     }
-}
+}  
         
