@@ -1,6 +1,5 @@
 using SurfsUpWebApp.Repositories;
 using SurfsUpWebApp.Models;
-using Type = SurfsUpWebApp.Models.Type;
 
 namespace Tests
 {
@@ -12,7 +11,7 @@ namespace Tests
         {
             // Arrange
             // Act
-            List<Type> types = TypeRepository.GetAllTypes();
+            List<ProductType> types = ProductTypeRepository.GetAllTypes();
 
             // Assert
             Assert.AreEqual(5, types.Count);
