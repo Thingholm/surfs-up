@@ -946,11 +946,13 @@ form >div{
 }
 
 
-.cart-item div input{
+.cart-item .cart-amount-container p{
     width: 48px;
     text-align: center;
     margin: 0px 8px;
     background-color: #f7f7f7;
+    padding: 4px 0px;
+    border-radius: 5px;
 }
 
 .cart-item div .amount-container button{

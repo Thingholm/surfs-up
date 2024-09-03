@@ -21,6 +21,10 @@ namespace SurfsUpWebApp.Repositories
             return cartItems;
             
         }
+        public CartItem? GetCartItemById(int id)
+        {
+            return cartItems.FirstOrDefault(item => item.Id == id);
+        }
 
         public void UpdateCartItemAmount(int cartItemId, int amount) 
         {
@@ -34,9 +38,16 @@ namespace SurfsUpWebApp.Repositories
             cartItemToBeUpdated.Amount = amount;
         }
 
-        public void DeleteCartItem(CartItem cartItem)
+        public void DeleteCartItem(int id)
         {
-            cartItems.Remove(cartItem);
+            if (cartItems.Count < 1)
+                return;
+
+            CartItem cartItemToDelete = cartItems.FirstOrDefault(item => item.Id == id);
+            if (cartItemToDelete == null)
+                return;
+
+            cartItems.Remove(cartItemToDelete);
         }
     }
 }

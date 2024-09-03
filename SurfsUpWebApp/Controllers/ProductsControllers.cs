@@ -65,7 +65,6 @@ namespace SurfsUpWebApp.Controllers
         }
 
         [HttpPost]
-        [Route("add")]
         public IActionResult AddToCart(int ProductId, int Amount)
         {
             Product product = ProductRepository.GetProductById(ProductId);

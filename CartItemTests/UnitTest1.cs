@@ -115,7 +115,7 @@ namespace CartItemTests
 
 
             //Act
-            cartItemRepository.DeleteCartItem(cartItem);
+            cartItemRepository.DeleteCartItem(cartItem.Id);
 
             //Assert
             var result = cartItemRepository.GetAllCartItems();
@@ -159,7 +159,7 @@ namespace CartItemTests
 
 
             //Act
-            cartItemRepository.DeleteCartItem(cartItem);
+            cartItemRepository.DeleteCartItem(cartItem.Id);
 
             //Assert
             var allCartItems = cartItemRepository.GetAllCartItems();
