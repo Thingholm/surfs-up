@@ -44,7 +44,7 @@ namespace SurfsUpWebApp.Controllers
                         break;
                 }
             }
-            (List<Product> Products, List<ProductType> ProductTypes) tuple = (products, productTypes);
+            (List<Product>? Products, List<ProductType>? ProductTypes) tuple = (products, productTypes);
             return View(tuple);
         }
 
@@ -68,8 +68,7 @@ namespace SurfsUpWebApp.Controllers
         [HttpPost]
         public IActionResult AddToCart(int ProductId, int Amount)
         {
-            Product product = ProductRepository.GetProductById(ProductId);
-            System.Console.WriteLine(Amount);
+            Product? product = ProductRepository.GetProductById(ProductId);
             if (product != null)
             {
                 CartItem cartItem = new CartItem
@@ -82,7 +81,7 @@ namespace SurfsUpWebApp.Controllers
                 _cartItemRepository.AddCartItem(cartItem);
             }
 
-            return RedirectToAction("Index", "Cart");
+            return RedirectToAction("Product", new { id = ProductId, name = StringFormatter.GenerateUrlSlug(ProductRepository.GetProductById(ProductId).Name) });
         }
     }
 }

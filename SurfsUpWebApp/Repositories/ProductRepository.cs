@@ -224,7 +224,10 @@ namespace SurfsUpWebApp.Repositories
 
             return products;
         }
-
+        public static List<Product>? GetProducts(int range)
+        {
+            return products.Take(range).ToList();
+        }
 
         public static List<Product>? GetProductsByTypes(string[] types)
         {

@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SurfsUpWebApp.Models;
+using SurfsUpWebApp.Repositories;
 
 namespace SurfsUpWebApp.Controllers
 {
@@ -6,7 +8,8 @@ namespace SurfsUpWebApp.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            List<Product>? products = ProductRepository.GetProducts(4);
+            return View(products);
         }
     }
 }

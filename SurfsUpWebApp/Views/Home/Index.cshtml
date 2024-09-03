@@ -14,50 +14,20 @@
 </section>
 <h2>Produkter</h2>
 <section class="flex-container observe">
-    <div>
+    @foreach (Product product in Model)
+    {
         <div>
-            <h2>Pakketilbud 1</h2>
-            <img src="~/Images/surfboard1.png" alt="Surfbræt">
-            <h3>899,-</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sed quas modi iste neque ut ipsum eum quam optio perspiciatis!</p>
-            <button class="btn primary contained">
-                Book nu
-            </button>
+            <div>
+                <h2>@product.Name</h2>
+                <img src=@($"/Images/products/{product.ImageUrl}") alt=@product.Name>
+                <h3>€@(product.Price.ToString("N2"))</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sed quas modi iste neque ut ipsum eum quam optio perspiciatis!</p>
+                <button class="btn primary contained">
+                    Se produkt
+                </button>
+            </div>
         </div>
-    </div>
-    <div>
-        <div>
-            <h2>Pakketilbud 2</h2>
-            <img src="~/Images/surfboard2.png" alt="Surfbræt">
-            <h3>799,-</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus optio praesentium nisi tempore eos?</p>
-            <button class="btn primary contained">
-                Book nu
-            </button>
-        </div>
-    </div>
-    <div>
-        <div>
-            <h2>Pakketilbud 3</h2>
-            <img src="~/Images/surfboard3.png" alt="Surfbræt">
-            <h3>699,-</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa ab ex alias necessitatibus adipisci beatae quidem vitae.</p>
-            <button class="btn primary contained">
-                Book Nu
-            </button>
-        </div>
-    </div>
-    <div>
-        <div>
-            <h2>Pakketilbud 4</h2>
-            <img src="~/Images/surfboard4.png" alt="Surfbræt">
-            <h3>599,-</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam rem doloribus nisi molestias ex, temporibus soluta nulla ea! Dolorum, eaque!</p>
-            <button class="btn primary contained">
-                Book nu
-            </button>
-        </div>
-    </div>
+    }
 </section>
 <h2>Om Surf's Up</h2>
 <section class="flex observe">

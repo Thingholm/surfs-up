@@ -49,6 +49,7 @@ body > h2{
 
 .btn-container{
     margin-top: 32px;
+    display: flex;
 }
 
 .btn-container .btn{
