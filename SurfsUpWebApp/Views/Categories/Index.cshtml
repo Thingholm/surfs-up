@@ -1,0 +1,52 @@
+@section breadcrumb{
+    <nav class="breadcrumb">
+        <a
+            asp-controller="Home"
+            asp-action="Index"
+        >
+            Forside
+        </a>
+        <svg fill="#000000" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title></title><path d="M69.8437,43.3876,33.8422,13.3863a6.0035,6.0035,0,0,0-7.6878,9.223l30.47,25.39-30.47,25.39a6.0035,6.0035,0,0,0,7.6878,9.2231L69.8437,52.6106a6.0091,6.0091,0,0,0,0-9.223Z"></path></g></svg>        
+        <a
+            asp-controller="Categories"
+            asp-action="Index"
+        >
+            Kategorier
+        </a>
+    </nav>
+}
+
+<h1>Vælg kategori</h1>
+<section class="categories">
+    <a 
+        asp-controller="Produkter" 
+        asp-action="Index"
+    >
+        <img src="~/Images/category-4.jpg" alt="Alle">
+        <p>Alle</p>
+    </a>
+    <a 
+        asp-controller="Produkter"
+        asp-action="Index"
+        asp-route-types="Shortboard"
+    >
+        <img src="~/Images/category-1.jpg" alt="ShortBoard">
+        <p>Shortboard</p>
+    </a>
+    <a 
+        asp-controller="Produkter"
+        asp-action="Index"
+        asp-route-types="Funboard"
+    >
+        <img src="~/Images/category-2.jpg" alt="Fun Board">
+        <p>Fun Board</p>
+    </a>
+    <a 
+        asp-controller="Produkter"
+        asp-action="Index"
+        asp-route-types="SUP"
+    >
+        <img src="~/Images/category-3.jpg" alt="SUP">
+        <p>SUP</p>
+    </a>
+</section>

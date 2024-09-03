@@ -3,7 +3,7 @@
 namespace SurfsUpWebApp.Controllers
 {
     [Route("kategorier")]
-    public class KategorierController : Controller
+    public class CategoriesController : Controller
     {
         public IActionResult Index()
         {

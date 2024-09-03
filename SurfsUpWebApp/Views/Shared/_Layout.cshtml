@@ -1,28 +1,32 @@
-﻿<!DOCTYPE html>
+﻿@{
+    string pathName = ViewContext.HttpContext.Request.Path.ToString().ToLower();
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surf's Up - Produkter</title>
-    <link rel="stylesheet" href="~/Style/style.css" asp-append-version="true">
-    <link rel="icon" href="~/Images/Skærmbillede 2024-08-23 092940.png">
+    <link rel="stylesheet" href="/Style/style.css" asp-append-version="true">
+    <link rel="icon" href="/Images/Skærmbillede 2024-08-23 092940.png">
 </head>
 <body>
     <header>
         <nav>
             <ul>
                 <li>
-                    <a href="/om-os" class="nav-item @(ViewContext.HttpContext.Request.Path == "/om-os" ? "current" : "")" id="about">Om os</a>
+                    <a href="/om-os" class="nav-item @(pathName.Contains("/om-os") ? "current" : "")" id="about">Om os</a>
                 </li>
                 <li>
-                    <a href="/produkter" class="nav-item @(ViewContext.HttpContext.Request.Path == "/produkter" ? "current" : "")" id="products">Produkter</a>
+                    <a href="/kategorier" class="nav-item @(pathName.Contains("/produkter") || pathName.Contains("/kategorier") || pathName.Contains("/produkt") ? "current" : "")" id="products">Produkter</a>
                 </li>
                 <li>
-                    <a href="/lokationer" class="nav-item @(ViewContext.HttpContext.Request.Path == "/lokationer" ? "current" : "")" id="locations">Lokationer</a>
+                    <a href="/lokationer" class="nav-item @(pathName.Contains("/lokationer") ? "current" : "")" id="locations">Lokationer</a>
                 </li>
             </ul>
         </nav>
-        <a href="/"><img src="images/Skærmbillede 2024-08-23 092940.png" alt="Surf's Up Logo"></a>
+        <a href="/"><img src="/Images/Skærmbillede 2024-08-23 092940.png" alt="Surf's Up Logo"></a>
         <nav>
             <ul>
                 <li>
@@ -37,7 +41,8 @@
             </ul>
         </nav>
     </header>
+    @RenderSection("breadcrumb", false)
     @RenderBody()
 </body>
-<script src="~/JavaScript/script.js"></script>
+<script src="/JavaScript/script.js"></script>
 </html>

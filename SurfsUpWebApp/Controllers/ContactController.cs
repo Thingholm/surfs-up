@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace SurfsUpWebApp.Controllers
 {
     [Route("kontakt")]
-    public class KontaktController : Controller
+    public class ContactController : Controller
     {
         public IActionResult Index()
         {

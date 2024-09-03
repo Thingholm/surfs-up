@@ -2,8 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace SurfsUpWebApp.Controllers
 {
-    [Route("produkter")]
-    public class ProdukterController : Controller
+    [Route("om-os")]
+    public class AboutController : Controller
     {
         public IActionResult Index()
         {
