@@ -14,7 +14,12 @@ namespace SurfsUpWebApp.Repositories
                 Width = 21.0,
                 Thickness = 2.75,
                 Volume = 38.8,
-                Type = "Shortboard",
+                Type = new ProductType
+                {
+                    Id = 1,
+                    Name = "Shortboard",
+                    ImageUrl = "category-1.jpg"
+                },
                 Price = 565.0,
                 Equipment = new List<string>(),
                 ImageUrl = "s326152794241300969_p345_i3_w5000.webp"
@@ -27,7 +32,12 @@ namespace SurfsUpWebApp.Repositories
                 Width = 21.75,
                 Thickness = 2.75,
                 Volume = 44.16,
-                Type = "Funboard",
+                Type = new ProductType
+                {
+                    Id = 2,
+                    Name = "Funboard",
+                    ImageUrl = "s326152794241300969_p327_i17_w1168.png"
+                },
                 Price = 685.0,
                 Equipment = new List<string>(),
                 ImageUrl = "s326152794241300969_p335_i10_w5000.webp"
@@ -40,8 +50,12 @@ namespace SurfsUpWebApp.Repositories
                 Width = 21.85,
                 Thickness = 2.9,
                 Volume = 43.22,
-                Type = "Funboard",
-                Price = 695.0,
+                Type = new ProductType
+                {
+                    Id = 2,
+                    Name = "Funboard",
+                    ImageUrl = "s326152794241300969_p327_i17_w1168.png"
+                },                Price = 695.0,
                 Equipment = new List<string>(),
                 ImageUrl = "s326152794241300969_p327_i17_w1168.png"
             },
@@ -53,7 +67,12 @@ namespace SurfsUpWebApp.Repositories
                 Width = 20.75,
                 Thickness = 2.3,
                 Volume = 29.39,
-                Type = "Fish",
+                Type = new ProductType
+                {
+                    Id = 3,
+                    Name = "Fish",
+                    ImageUrl = "surfboard4.png"
+                },               
                 Price = 645.0,
                 Equipment = new List<string>(),
                 ImageUrl = "s326152794241300969_p332_i22_w1116.png"
@@ -66,7 +85,12 @@ namespace SurfsUpWebApp.Repositories
                 Width = 22.8,
                 Thickness = 2.8,
                 Volume = 65.4,
-                Type = "Longboard",
+                Type = new ProductType
+                {
+                    Id = 4,
+                    Name = "Longboard",
+                    ImageUrl = "s326152794241300969_p285_i27_w333.jpeg" 
+                },
                 Price = 895.0,
                 Equipment = new List<string>(),
                 ImageUrl = "s326152794241300969_p336_i55_w5000.webp"
@@ -79,7 +103,12 @@ namespace SurfsUpWebApp.Repositories
                 Width = 21.0,
                 Thickness = 2.5,
                 Volume = 33.7,
-                Type = "Shortboard",
+                Type = new ProductType
+                {
+                    Id = 1,
+                    Name = "Shortboard",
+                    ImageUrl = "category-1.jpg"
+                },
                 Price = 645.0,
                 Equipment = new List<string>(),
                 ImageUrl = "s326152794241300969_p6_i6_w741.jpeg"
@@ -92,7 +121,12 @@ namespace SurfsUpWebApp.Repositories
                 Width = 19.4,
                 Thickness = 3.0,
                 Volume = 80.0,
-                Type = "Longboard",
+                Type = new ProductType
+                {
+                    Id = 4,
+                    Name = "Longboard",
+                    ImageUrl = "s326152794241300969_p285_i27_w333.jpeg" 
+                },
                 Price = 1025.0,
                 Equipment = new List<string>(),
                 ImageUrl = "s326152794241300969_p285_i27_w333.jpeg"
@@ -105,7 +139,12 @@ namespace SurfsUpWebApp.Repositories
                 Width = 30.0,
                 Thickness = 6.0,
                 Volume = 301.0,
-                Type = "SUP",
+                Type = new ProductType
+                {
+                    Id = 5,
+                    Name = "SUP",
+                    ImageUrl = "category-3.jpg"
+                },
                 Price = 854.0,
                 Equipment = new List<string> { "Paddle" },
                 ImageUrl = "naish-nalu-10-6-s26-inflatable-sup.jpg"
@@ -118,7 +157,12 @@ namespace SurfsUpWebApp.Repositories
                 Width = 32.0,
                 Thickness = 6.0,
                 Volume = 270.0,
-                Type = "SUP",
+                Type = new ProductType
+                {
+                    Id = 5,
+                    Name = "SUP",
+                    ImageUrl = "category-3.jpg"
+                },
                 Price = 611.0,
                 Equipment = new List<string> { "Fin", "Paddle", "Pump", "Leash" },
                 ImageUrl = "stx-tourer-11-6-2022-2023-inflatable-sup-package.jpg"
@@ -131,8 +175,12 @@ namespace SurfsUpWebApp.Repositories
                 Width = 25.0,
                 Thickness = 6.0,
                 Volume = 330.0,
-                Type = "SUP",
-                Price = 1304.0,
+                Type = new ProductType
+                {
+                    Id = 5,
+                    Name = "SUP",
+                    ImageUrl = "category-3.jpg"
+                },                Price = 1304.0,
                 Equipment = new List<string> { "Fin", "Paddle", "Pump", "Leash" },
                 ImageUrl = "naish-maliko-carbon-14-x-27-2024-inflatable-sup.jpg"
             }
@@ -180,12 +228,12 @@ namespace SurfsUpWebApp.Repositories
 
         public static List<Product>? GetProductsByTypes(string[] types)
         {
-            if (types == null || types.Length < 1 || products?.Any(p => types.Any(t => t == p.Type)) == null)
+            if (types == null || types.Length < 1 || products?.Any(p => types.Any(t => int.Parse(t) == p.Type.Id)) == null)
             {
                 return null;
             }
 
-            return products.Where(p =>  types.Any(t => t == p.Type)).ToList();
+            return products.Where(p =>  types.Any(t => int.Parse(t) == p.Type.Id)).ToList();
         }
 
 

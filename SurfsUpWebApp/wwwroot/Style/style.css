@@ -596,6 +596,7 @@ form >div{
 .categories{
     display: grid;
     grid-template-columns: repeat(4, 23%);
+    gap: 32px;
     justify-content: space-between;
 }
 
