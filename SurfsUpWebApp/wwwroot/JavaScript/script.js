@@ -71,6 +71,7 @@ function incrementAmount(){
     url.searchParams.set("amount", amount + 1);
 
     document.getElementById("amount").innerHTML = amount + 1;
+    document.getElementById("amount-input").value = amount + 1;
 
     window.history.pushState({}, '', url);
 }
@@ -83,6 +84,7 @@ function decrementAmount(){
         url.searchParams.set("amount", amount - 1);
 
         document.getElementById("amount").innerHTML = amount - 1;
+        document.getElementById("amount-input").value = amount - 1;
     
         window.history.pushState({}, '', url);
     }

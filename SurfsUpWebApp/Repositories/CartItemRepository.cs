@@ -31,7 +31,7 @@ namespace SurfsUpWebApp.Repositories
             if (cartItemToBeUpdated == null)
                 return;
             
-            cartItemToBeUpdated.amount = amount;
+            cartItemToBeUpdated.Amount = amount;
         }
 
         public void DeleteCartItem(CartItem cartItem)

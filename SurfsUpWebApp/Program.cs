@@ -1,3 +1,5 @@
+using SurfsUpWebApp.Repositories;
+
 namespace SurfsUpWebApp
 {
     public class Program
@@ -5,6 +7,8 @@ namespace SurfsUpWebApp
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddSingleton<CartItemRepository>();
 
             builder.Services.AddControllersWithViews();
 

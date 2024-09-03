@@ -7,6 +7,12 @@ namespace SurfsUpWebApp.Controllers
 {
     public class ProductsController : Controller
     {
+        private readonly CartItemRepository _cartItemRepository;
+        public ProductsController(CartItemRepository cartItemRepository)
+        {
+            _cartItemRepository = cartItemRepository;
+        }
+
         [Route("produkter")]
         public IActionResult Index(string? types, string? sortBy)
         {
@@ -43,7 +49,8 @@ namespace SurfsUpWebApp.Controllers
 
 
         [Route("produkter/{id}/{name?}")]
-        public IActionResult Product(int id, string? name){
+        public IActionResult Product(int id, string? name)
+        {
             Product? product = ProductRepository.GetProductById(id);
             if (product != null)
             {
@@ -55,6 +62,27 @@ namespace SurfsUpWebApp.Controllers
                 return View(product);
             }
             return View("Index");
+        }
+
+        [HttpPost]
+        [Route("add")]
+        public IActionResult AddToCart(int ProductId, int Amount)
+        {
+            Product product = ProductRepository.GetProductById(ProductId);
+            System.Console.WriteLine(Amount);
+            if (product != null)
+            {
+                CartItem cartItem = new CartItem
+                {
+                    Id = product.Id,
+                    Product = product,
+                    Amount = Amount
+                };
+
+                _cartItemRepository.AddCartItem(cartItem);
+            }
+
+            return RedirectToAction("Index", "Cart");
         }
     }
 }
