@@ -27,7 +27,7 @@ namespace SurfsUpWebApp.Repositories
              if(cartItemId == null || amount < 0)
                 return;
 
-            CartItem cartItemToBeUpdated = cartItems.FirstOrDefault(x => x.id == cartItemId);
+            CartItem cartItemToBeUpdated = cartItems.FirstOrDefault(x => x.Id == cartItemId);
             if (cartItemToBeUpdated == null)
                 return;
             
