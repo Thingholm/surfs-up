@@ -3,8 +3,8 @@ namespace SurfsUpWebApp.Models
     public class CartItem
     {
         public int Id {get; set;}
-        public Product product {get; set;}
-        public int amount {get; set;}
+        public Product Product {get; set;}
+        public int Amount {get; set;}
     }
 }
         
