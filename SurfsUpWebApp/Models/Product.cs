@@ -12,6 +12,11 @@
         public double Price { get; set; }
         public List<string> Equipment { get; set; }
         public string ImageUrl { get; set; }
+
+        public override string ToString()
+        {
+            return $"Id: {Id}, Name: {Name}, Length: {Length}, Width: {Width}, Thickness: {Thickness}, Volume: {Volume}, Type: {Type}, Price: {Price}";
+        }
     }
 }
         
