@@ -2,7 +2,7 @@ using SurfsUpWebApp.Models;
 
 namespace SurfsUpWebApp.Repositories
 {
-    public static class CartItemRepository
+    public class CartItemRepository
     { 
         private List<CartItem> cartItems = new List<CartItem>();
 
@@ -24,7 +24,7 @@ namespace SurfsUpWebApp.Repositories
 
         public void UpdateCartItemAmount(int cartItemId, int amount) 
         {
-             if(cartItem == null || amount < 0)
+             if(cartItemId == null || amount < 0)
                 return;
 
             CartItem cartItemToBeUpdated = cartItems.FirstOrDefault(x => x.id == cartItemId);
@@ -36,7 +36,7 @@ namespace SurfsUpWebApp.Repositories
 
         public void DeleteCartItem(CartItem cartItem)
         {
-            cartItem.Remove(cartItem);
+            cartItems.Remove(cartItem);
         }
     }
 }
