@@ -8,10 +8,11 @@ namespace SurfsUpWebApp.Models
         public DateTime StartDateTime { get; set; }
         public DateTime EndDateTime { get; set; }
 
-        public DateTime GetDuration() 
+        public TimeSpan GetDuration() 
         {
-            GetDuration = StartDateTime -EndDateTime
+            TimeSpan duration = EndDateTime - StartDateTime;
 
+            return duration;
         }
 
    }

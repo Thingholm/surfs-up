@@ -24,7 +24,7 @@ namespace CartItemTests
                 Width = 21.0,
                 Thickness = 2.75,
                 Volume = 38.8,
-                Type =             new ProductType
+                Type =  new ProductType
                 {
                     Id = 1,
                     Name = "Shortboard",
