@@ -6,10 +6,10 @@ using SurfsUpWebApp.Models;
 
 #nullable disable
 
-namespace SurfsUpWebApp.Migrations.CartItemDbMigrations
+namespace SurfsUpWebApp.Migrations
 {
-    [DbContext(typeof(CartItemDb))]
-    partial class CartItemDbModelSnapshot : ModelSnapshot
+    [DbContext(typeof(AppDataContext))]
+    partial class AppDataContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -75,7 +75,7 @@ namespace SurfsUpWebApp.Migrations.CartItemDbMigrations
 
                     b.HasIndex("TypeId");
 
-                    b.ToTable("Product");
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("SurfsUpWebApp.Models.ProductType", b =>
@@ -93,7 +93,7 @@ namespace SurfsUpWebApp.Migrations.CartItemDbMigrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductType");
+                    b.ToTable("ProductTypes");
                 });
 
             modelBuilder.Entity("SurfsUpWebApp.Models.CartItem", b =>

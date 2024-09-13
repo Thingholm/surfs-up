@@ -11,9 +11,9 @@ namespace SurfsUpWebApp.Models
         public string? ImageUrl { get; set; }
     }
 
-     class ProductTypeDb : DbContext 
-    {
-        public ProductTypeDb(DbContextOptions options) : base(options) {}
-        public DbSet<ProductType> ProductTypes { get; set; } = null!;
-    }
+    //  class ProductTypeDb : DbContext 
+    // {
+    //     public ProductTypeDb(DbContextOptions options) : base(options) {}
+    //     public DbSet<ProductType> ProductTypes { get; set; } = null!;
+    // }
 }

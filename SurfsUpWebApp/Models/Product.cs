@@ -21,10 +21,10 @@ namespace SurfsUpWebApp.Models
         }
     }
 
-     class ProductDb : DbContext 
-    {
-        public ProductDb(DbContextOptions options) : base(options) {}
-        public DbSet<Product> Products { get; set; } = null!;
-    }
+    //  class ProductDb : DbContext 
+    // {
+    //     public ProductDb(DbContextOptions options) : base(options) {}
+    //     public DbSet<Product> Products { get; set; } = null!;
+    // }
 }
         

@@ -15,10 +15,10 @@ namespace SurfsUpWebApp.Models
         }
     }
 
-    class CartItemDb : DbContext 
-    {
-        public CartItemDb(DbContextOptions<CartItemDb> options) : base(options) {}
-        public DbSet<CartItem> CartItems { get; set; } = null!;
-    }
+    // class CartItemDb : DbContext 
+    // {
+    //     public CartItemDb(DbContextOptions<CartItemDb> options) : base(options) {}
+    //     public DbSet<CartItem> CartItems { get; set; } = null!;
+    // }
 }
         
