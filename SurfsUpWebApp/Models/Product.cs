@@ -1,4 +1,6 @@
-﻿namespace SurfsUpWebApp.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace SurfsUpWebApp.Models
 {
     public class Product
     {
@@ -17,6 +19,12 @@
         {
             return $"Id: {Id}, Name: {Name}, Length: {Length}, Width: {Width}, Thickness: {Thickness}, Volume: {Volume}, Type: {Type}, Price: {Price}";
         }
+    }
+
+     class ProductDb : DbContext 
+    {
+        public ProductDb(DbContextOptions options) : base(options) {}
+        public DbSet<Product> Products { get; set; } = null!;
     }
 }
         

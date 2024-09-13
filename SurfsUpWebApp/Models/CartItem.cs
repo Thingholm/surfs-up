@@ -1,4 +1,5 @@
 using System.Xml.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace SurfsUpWebApp.Models
 {
@@ -12,6 +13,12 @@ namespace SurfsUpWebApp.Models
         {
             return $"Id: {Id}, Product: {Product}, Amount: {Amount}";
         }
+    }
+
+    class CartItemDb : DbContext 
+    {
+        public CartItemDb(DbContextOptions options) : base(options) {}
+        public DbSet<CartItem> CartItems { get; set; } = null!;
     }
 }
         

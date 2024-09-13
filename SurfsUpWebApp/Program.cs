@@ -1,4 +1,6 @@
 using SurfsUpWebApp.Repositories;
+using Microsoft.OpenApi.Models;
+using SurfsUpWebApp.Models;
 
 namespace SurfsUpWebApp
 {
@@ -7,6 +9,12 @@ namespace SurfsUpWebApp
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            var connecionString = builder.Configuration.GetConnectionString("Products") ?? "Data Source = Products.db";
+            //builder.Services.AddDbContext<CartItemDb>(options => options.UseInMemoryDatabase("items"));
+            builder.Services.AddSqlite<ProductDb>(connecionString);
+
+            builder.Services.AddEndpointsApiExplorer();
+            
 
             builder.Services.AddSingleton<CartItemRepository>();
 
