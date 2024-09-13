@@ -18,7 +18,7 @@ namespace CartItemTests
             CartItemRepository cartItemRepository = new CartItemRepository();
             Product product = new Product()
             {
-                Id = 1,
+                ProductId = 1,
                 Name = "The Minilog",
                 Length = 6.0,
                 Width = 21.0,
@@ -26,7 +26,7 @@ namespace CartItemTests
                 Volume = 38.8,
                 Type =             new ProductType
                 {
-                    Id = 1,
+                    ProductTypeId = 1,
                     Name = "Shortboard",
                     ImageUrl = "category-1.jpg"
                 },
@@ -36,7 +36,7 @@ namespace CartItemTests
             };
             CartItem cartItem = new CartItem()
             {
-                Id = 23,
+                CartItemId = 23,
                 Product = product,
                 Amount = 25
             };
@@ -59,7 +59,7 @@ namespace CartItemTests
             CartItemRepository cartItemRepository = new CartItemRepository();
             Product product = new Product()
             {
-                Id = 1,
+                ProductId = 1,
                 Name = "The Minilog",
                 Length = 6.0,
                 Width = 21.0,
@@ -67,7 +67,7 @@ namespace CartItemTests
                 Volume = 38.8,
                 Type =             new ProductType
                 {
-                    Id = 1,
+                    ProductTypeId = 1,
                     Name = "Shortboard",
                     ImageUrl = "category-1.jpg"
                 },
@@ -77,7 +77,7 @@ namespace CartItemTests
             };
             CartItem cartItem = new CartItem()
             {
-                Id = 23,
+                CartItemId = 23,
                 Product = product,
                 Amount = 25
             };
@@ -85,8 +85,8 @@ namespace CartItemTests
             int updatedAmount = 50;
 
             // Act
-            cartItemRepository.UpdateCartItemAmount(cartItem.Id, updatedAmount);
-            var updatedCartItem = cartItemRepository.GetAllCartItems().Find(x => x.Id == cartItem.Id);
+            cartItemRepository.UpdateCartItemAmount(cartItem.CartItemId, updatedAmount);
+            var updatedCartItem = cartItemRepository.GetAllCartItems().Find(x => x.CartItemId == cartItem.CartItemId);
 
             // Assert
             Assert.IsNotNull(updatedCartItem);
@@ -104,7 +104,7 @@ namespace CartItemTests
             CartItemRepository cartItemRepository = new CartItemRepository();
             Product product = new Product()
             {
-                Id = 1,
+                ProductId = 1,
                 Name = "The Minilog",
                 Length = 6.0,
                 Width = 21.0,
@@ -112,7 +112,7 @@ namespace CartItemTests
                 Volume = 38.8,
                 Type =             new ProductType
                 {
-                    Id = 1,
+                    ProductTypeId = 1,
                     Name = "Shortboard",
                     ImageUrl = "category-1.jpg"
                 },
@@ -122,7 +122,7 @@ namespace CartItemTests
             };
             CartItem cartItem = new CartItem()
             {
-                Id = 23,
+                CartItemId = 23,
                 Product = product,
                 Amount = 25
             };
@@ -130,7 +130,7 @@ namespace CartItemTests
 
 
             //Act
-            cartItemRepository.DeleteCartItem(cartItem.Id);
+            cartItemRepository.DeleteCartItem(cartItem.CartItemId);
 
             //Assert
             var result = cartItemRepository.GetAllCartItems();
@@ -146,7 +146,7 @@ namespace CartItemTests
             CartItemRepository cartItemRepository = new CartItemRepository();
             Product product = new Product()
             {
-                Id = 1,
+                ProductId = 1,
                 Name = "The Minilog",
                 Length = 6.0,
                 Width = 21.0,
@@ -154,7 +154,7 @@ namespace CartItemTests
                 Volume = 38.8,
                 Type =             new ProductType
                 {
-                    Id = 1,
+                    ProductTypeId = 1,
                     Name = "Shortboard",
                     ImageUrl = "category-1.jpg"
                 },
@@ -164,13 +164,13 @@ namespace CartItemTests
             };
             CartItem cartItem = new CartItem()
             {
-                Id = 23,
+                CartItemId = 23,
                 Product = product,
                 Amount = 25
             };
             CartItem cartItem2 = new CartItem()
             {
-                Id = 3,
+                CartItemId = 3,
                 Product = product,
                 Amount = 2
             };
@@ -179,11 +179,11 @@ namespace CartItemTests
 
 
             //Act
-            cartItemRepository.DeleteCartItem(cartItem.Id);
+            cartItemRepository.DeleteCartItem(cartItem.CartItemId);
 
             //Assert
             var allCartItems = cartItemRepository.GetAllCartItems();
-            Assert.IsFalse(allCartItems.Any(ci => ci.Id == cartItem.Id));
+            Assert.IsFalse(allCartItems.Any(ci => ci.CartItemId == cartItem.CartItemId));
 
 
         }
@@ -198,7 +198,7 @@ namespace CartItemTests
             CartItemRepository cartItemRepository = new CartItemRepository();
             Product product = new Product()
             {
-                Id = 1,
+                ProductId = 1,
                 Name = "The Minilog",
                 Length = 6.0,
                 Width = 21.0,
@@ -206,7 +206,7 @@ namespace CartItemTests
                 Volume = 38.8,
                 Type =             new ProductType
                 {
-                    Id = 1,
+                    ProductTypeId = 1,
                     Name = "Shortboard",
                     ImageUrl = "category-1.jpg"
                 },
@@ -216,7 +216,7 @@ namespace CartItemTests
             };
             CartItem cartItem = new CartItem()
             {
-                Id = 23,
+                CartItemId = 23,
                 Product = product,
                 Amount = 25
             };

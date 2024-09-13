@@ -14,40 +14,40 @@ namespace SurfsUpWebApp.Migrations
                 name: "ProductTypes",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                    ProductTypeId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     ImageUrl = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProductTypes", x => x.Id);
+                    table.PrimaryKey("PK_ProductTypes", x => x.ProductTypeId);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Products",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                    ProductId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     Length = table.Column<double>(type: "REAL", nullable: false),
                     Width = table.Column<double>(type: "REAL", nullable: false),
                     Thickness = table.Column<double>(type: "REAL", nullable: false),
                     Volume = table.Column<double>(type: "REAL", nullable: false),
-                    TypeId = table.Column<int>(type: "INTEGER", nullable: false),
+                    TypeProductTypeId = table.Column<int>(type: "INTEGER", nullable: false),
                     Price = table.Column<double>(type: "REAL", nullable: false),
                     Equipment = table.Column<string>(type: "TEXT", nullable: false),
                     ImageUrl = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Products", x => x.Id);
+                    table.PrimaryKey("PK_Products", x => x.ProductId);
                     table.ForeignKey(
-                        name: "FK_Products_ProductTypes_TypeId",
-                        column: x => x.TypeId,
+                        name: "FK_Products_ProductTypes_TypeProductTypeId",
+                        column: x => x.TypeProductTypeId,
                         principalTable: "ProductTypes",
-                        principalColumn: "Id",
+                        principalColumn: "ProductTypeId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -55,19 +55,19 @@ namespace SurfsUpWebApp.Migrations
                 name: "CartItems",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                    CartItemId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     ProductId = table.Column<int>(type: "INTEGER", nullable: false),
                     Amount = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CartItems", x => x.Id);
+                    table.PrimaryKey("PK_CartItems", x => x.CartItemId);
                     table.ForeignKey(
                         name: "FK_CartItems_Products_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Products",
-                        principalColumn: "Id",
+                        principalColumn: "ProductId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -77,9 +77,9 @@ namespace SurfsUpWebApp.Migrations
                 column: "ProductId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_TypeId",
+                name: "IX_Products_TypeProductTypeId",
                 table: "Products",
-                column: "TypeId");
+                column: "TypeProductTypeId");
         }
 
         /// <inheritdoc />

@@ -4,7 +4,7 @@ namespace SurfsUpWebApp.Models
 {
     public class Product
     {
-        public int Id { get; set; }
+        public int ProductId { get; set; }
         public string Name { get; set; }
         public double Length { get; set; }
         public double Width { get; set; }
@@ -17,7 +17,7 @@ namespace SurfsUpWebApp.Models
 
         public override string ToString()
         {
-            return $"Id: {Id}, Name: {Name}, Length: {Length}, Width: {Width}, Thickness: {Thickness}, Volume: {Volume}, Type: {Type}, Price: {Price}";
+            return $"Id: {ProductId}, Name: {Name}, Length: {Length}, Width: {Width}, Thickness: {Thickness}, Volume: {Volume}, Type: {Type}, Price: {Price}";
         }
     }
 

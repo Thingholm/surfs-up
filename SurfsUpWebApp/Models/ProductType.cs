@@ -5,7 +5,7 @@ namespace SurfsUpWebApp.Models
 {
     public class ProductType
     {
-        public int Id { get; set; }
+        public int ProductTypeId { get; set; }
         [Required]
         public string Name { get; set; }
         public string? ImageUrl { get; set; }

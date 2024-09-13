@@ -23,7 +23,7 @@ namespace SurfsUpWebApp.Repositories
         }
         public CartItem? GetCartItemById(int id)
         {
-            return cartItems.FirstOrDefault(item => item.Id == id);
+            return cartItems.FirstOrDefault(item => item.CartItemId == id);
         }
 
         public void UpdateCartItemAmount(int cartItemId, int amount) 
@@ -31,7 +31,7 @@ namespace SurfsUpWebApp.Repositories
              if(cartItemId == null || amount < 0)
                 return;
 
-            CartItem cartItemToBeUpdated = cartItems.FirstOrDefault(x => x.Id == cartItemId);
+            CartItem cartItemToBeUpdated = cartItems.FirstOrDefault(x => x.CartItemId == cartItemId);
             if (cartItemToBeUpdated == null)
                 return;
             
@@ -43,7 +43,7 @@ namespace SurfsUpWebApp.Repositories
             if (cartItems.Count < 1)
                 return;
 
-            CartItem cartItemToDelete = cartItems.FirstOrDefault(item => item.Id == id);
+            CartItem cartItemToDelete = cartItems.FirstOrDefault(item => item.CartItemId == id);
             if (cartItemToDelete == null)
                 return;
 

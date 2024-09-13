@@ -19,7 +19,8 @@ namespace SurfsUpWebApp
             builder.Services.AddEndpointsApiExplorer();
             
 
-            builder.Services.AddSingleton<CartItemRepository>();
+            //builder.Services.AddSingleton<CartItemRepository>();
+            builder.Services.AddScoped<CartItemRepository>();
 
             builder.Services.AddControllersWithViews();
 
@@ -28,6 +29,14 @@ namespace SurfsUpWebApp
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.MapGet("/addexample", async (AppDataContext db ) => {
+                var examples = ProductRepository.GetAllProducts();
+                examples.ForEach((s) => { db.Products.Add(s);
+                });
+                
+                await db.SaveChangesAsync();
+             });
 
             app.MapControllerRoute(
                 name: "default",

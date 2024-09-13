@@ -29,12 +29,12 @@
             foreach(ProductType productType in Model.Item2)
             {
                 <div class="input-container">
-                    <label for=@productType.Id>@productType.Name</label>
+                    <label for=@productType.ProductTypeId>@productType.Name</label>
                     <input 
                         type="checkbox" 
-                        name=@productType.Id 
-                        id=@productType.Id 
-                        @(selectedTypes.Contains(@productType.Id.ToString()) ? "checked" : "")
+                        name=@productType.ProductTypeId 
+                        id=@productType.ProductTypeId 
+                        @(selectedTypes.Contains(@productType.ProductTypeId.ToString()) ? "checked" : "")
                     >
                 </div>
             }
@@ -61,7 +61,7 @@
                         class="product-container"
                         asp-controller="Products"
                         asp-action="Product"
-                        asp-route-id=@(product.Id)
+                        asp-route-id=@(product.ProductId)
                     >
                         <div class="img-container">
                             <img src=@($"/Images/products/{product.ImageUrl}") alt=@(product.Name) />

@@ -32,7 +32,7 @@ namespace SurfsUpWebApp.Controllers
                 switch (sortBy)
                 {
                     case "popularity":
-                        products = products.OrderBy(p => p.Id).ToList();
+                        products = products.OrderBy(p => p.ProductId).ToList();
                         break;
                     case "price-asc":
                         products = products.OrderBy(p => p.Price).ToList();
@@ -73,7 +73,7 @@ namespace SurfsUpWebApp.Controllers
             {
                 CartItem cartItem = new CartItem
                 {
-                    Id = product.Id,
+                    CartItemId = product.ProductId,
                     Product = product,
                     Amount = Amount
                 };

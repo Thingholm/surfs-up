@@ -33,7 +33,7 @@
             <a
                 asp-controller="Products"
                 asp-action="Index"
-                asp-route-types=@(ProductType.Id)
+                asp-route-types=@(ProductType.ProductTypeId)
                 >
                 <img src="@($"/Images/Category/{ProductType.ImageUrl}")"alt="@(ProductType.Name)"/>
                 <p>@ProductType.Name</p>

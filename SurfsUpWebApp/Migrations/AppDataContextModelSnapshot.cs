@@ -18,7 +18,7 @@ namespace SurfsUpWebApp.Migrations
 
             modelBuilder.Entity("SurfsUpWebApp.Models.CartItem", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("CartItemId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -28,7 +28,7 @@ namespace SurfsUpWebApp.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+                    b.HasKey("CartItemId");
 
                     b.HasIndex("ProductId");
 
@@ -37,7 +37,7 @@ namespace SurfsUpWebApp.Migrations
 
             modelBuilder.Entity("SurfsUpWebApp.Models.Product", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -62,7 +62,7 @@ namespace SurfsUpWebApp.Migrations
                     b.Property<double>("Thickness")
                         .HasColumnType("REAL");
 
-                    b.Property<int>("TypeId")
+                    b.Property<int>("TypeProductTypeId")
                         .HasColumnType("INTEGER");
 
                     b.Property<double>("Volume")
@@ -71,16 +71,16 @@ namespace SurfsUpWebApp.Migrations
                     b.Property<double>("Width")
                         .HasColumnType("REAL");
 
-                    b.HasKey("Id");
+                    b.HasKey("ProductId");
 
-                    b.HasIndex("TypeId");
+                    b.HasIndex("TypeProductTypeId");
 
                     b.ToTable("Products");
                 });
 
             modelBuilder.Entity("SurfsUpWebApp.Models.ProductType", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ProductTypeId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -91,7 +91,7 @@ namespace SurfsUpWebApp.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+                    b.HasKey("ProductTypeId");
 
                     b.ToTable("ProductTypes");
                 });
@@ -111,7 +111,7 @@ namespace SurfsUpWebApp.Migrations
                 {
                     b.HasOne("SurfsUpWebApp.Models.ProductType", "Type")
                         .WithMany()
-                        .HasForeignKey("TypeId")
+                        .HasForeignKey("TypeProductTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

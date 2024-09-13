@@ -8,7 +8,7 @@ namespace SurfsUpWebApp.Repositories
         {
             new Product
             {
-                Id = 1,
+                ProductId = 1,
                 Name = "The Minilog",
                 Length = 6.0,
                 Width = 21.0,
@@ -16,7 +16,7 @@ namespace SurfsUpWebApp.Repositories
                 Volume = 38.8,
                 Type = new ProductType
                 {
-                    Id = 1,
+                    ProductTypeId = 1,
                     Name = "Shortboard",
                     ImageUrl = "category-1.jpg"
                 },
@@ -26,7 +26,7 @@ namespace SurfsUpWebApp.Repositories
             },
             new Product
             {
-                Id = 2,
+                ProductId = 2,
                 Name = "The Wide Glider",
                 Length = 7.1,
                 Width = 21.75,
@@ -34,7 +34,7 @@ namespace SurfsUpWebApp.Repositories
                 Volume = 44.16,
                 Type = new ProductType
                 {
-                    Id = 2,
+                    ProductTypeId = 2,
                     Name = "Funboard",
                     ImageUrl = "s326152794241300969_p327_i17_w1168.png"
                 },
@@ -44,7 +44,7 @@ namespace SurfsUpWebApp.Repositories
             },
             new Product
             {
-                Id = 3,
+                ProductId = 3,
                 Name = "The Golden Ratio",
                 Length = 6.3,
                 Width = 21.85,
@@ -52,7 +52,7 @@ namespace SurfsUpWebApp.Repositories
                 Volume = 43.22,
                 Type = new ProductType
                 {
-                    Id = 2,
+                    ProductTypeId = 2,
                     Name = "Funboard",
                     ImageUrl = "s326152794241300969_p327_i17_w1168.png"
                 },                Price = 695.0,
@@ -61,7 +61,7 @@ namespace SurfsUpWebApp.Repositories
             },
             new Product
             {
-                Id = 4,
+                ProductId = 4,
                 Name = "Mahi Mahi",
                 Length = 5.4,
                 Width = 20.75,
@@ -69,7 +69,7 @@ namespace SurfsUpWebApp.Repositories
                 Volume = 29.39,
                 Type = new ProductType
                 {
-                    Id = 3,
+                    ProductTypeId = 3,
                     Name = "Fish",
                     ImageUrl = "surfboard4.png"
                 },               
@@ -79,7 +79,7 @@ namespace SurfsUpWebApp.Repositories
             },
             new Product
             {
-                Id = 5,
+                ProductId = 5,
                 Name = "The Emerald Glider",
                 Length = 9.2,
                 Width = 22.8,
@@ -87,7 +87,7 @@ namespace SurfsUpWebApp.Repositories
                 Volume = 65.4,
                 Type = new ProductType
                 {
-                    Id = 4,
+                    ProductTypeId = 4,
                     Name = "Longboard",
                     ImageUrl = "s326152794241300969_p285_i27_w333.jpeg" 
                 },
@@ -97,7 +97,7 @@ namespace SurfsUpWebApp.Repositories
             },
             new Product
             {
-                Id = 6,
+                ProductId = 6,
                 Name = "The Bomb",
                 Length = 5.5,
                 Width = 21.0,
@@ -105,7 +105,7 @@ namespace SurfsUpWebApp.Repositories
                 Volume = 33.7,
                 Type = new ProductType
                 {
-                    Id = 1,
+                    ProductTypeId = 1,
                     Name = "Shortboard",
                     ImageUrl = "category-1.jpg"
                 },
@@ -115,7 +115,7 @@ namespace SurfsUpWebApp.Repositories
             },
             new Product
             {
-                Id = 7,
+                ProductId = 7,
                 Name = "Walden Magic",
                 Length = 9.6,
                 Width = 19.4,
@@ -123,7 +123,7 @@ namespace SurfsUpWebApp.Repositories
                 Volume = 80.0,
                 Type = new ProductType
                 {
-                    Id = 4,
+                    ProductTypeId = 4,
                     Name = "Longboard",
                     ImageUrl = "s326152794241300969_p285_i27_w333.jpeg" 
                 },
@@ -133,7 +133,7 @@ namespace SurfsUpWebApp.Repositories
             },
             new Product
             {
-                Id = 8,
+                ProductId = 8,
                 Name = "Naish One",
                 Length = 12.6,
                 Width = 30.0,
@@ -141,7 +141,7 @@ namespace SurfsUpWebApp.Repositories
                 Volume = 301.0,
                 Type = new ProductType
                 {
-                    Id = 5,
+                    ProductTypeId = 5,
                     Name = "SUP",
                     ImageUrl = "category-3.jpg"
                 },
@@ -151,7 +151,7 @@ namespace SurfsUpWebApp.Repositories
             },
             new Product
             {
-                Id = 9,
+                ProductId = 9,
                 Name = "Six Tourer",
                 Length = 11.6,
                 Width = 32.0,
@@ -159,7 +159,7 @@ namespace SurfsUpWebApp.Repositories
                 Volume = 270.0,
                 Type = new ProductType
                 {
-                    Id = 5,
+                    ProductTypeId = 5,
                     Name = "SUP",
                     ImageUrl = "category-3.jpg"
                 },
@@ -169,7 +169,7 @@ namespace SurfsUpWebApp.Repositories
             },
             new Product
             {
-                Id = 10,
+                ProductId = 10,
                 Name = "Naish Maliko",
                 Length = 14.0,
                 Width = 25.0,
@@ -177,7 +177,7 @@ namespace SurfsUpWebApp.Repositories
                 Volume = 330.0,
                 Type = new ProductType
                 {
-                    Id = 5,
+                    ProductTypeId = 5,
                     Name = "SUP",
                     ImageUrl = "category-3.jpg"
                 },                Price = 1304.0,
@@ -195,7 +195,7 @@ namespace SurfsUpWebApp.Repositories
             if(product == null)
                 return;
 
-            Product? productToUpdate = GetProductById(product.Id);
+            Product? productToUpdate = GetProductById(product.ProductId);
             if (productToUpdate == null)
                 return;
             productToUpdate = product;   
@@ -206,7 +206,7 @@ namespace SurfsUpWebApp.Repositories
         {
             foreach (Product product in products)
             {
-                if(product.Id == Id)
+                if(product.ProductId == Id)
                     return product;
 
             }
@@ -231,12 +231,12 @@ namespace SurfsUpWebApp.Repositories
 
         public static List<Product>? GetProductsByTypes(string[] types)
         {
-            if (types == null || types.Length < 1 || products?.Any(p => types.Any(t => int.Parse(t) == p.Type.Id)) == null)
+            if (types == null || types.Length < 1 || products?.Any(p => types.Any(t => int.Parse(t) == p.Type.ProductTypeId)) == null)
             {
                 return null;
             }
 
-            return products.Where(p =>  types.Any(t => int.Parse(t) == p.Type.Id)).ToList();
+            return products.Where(p =>  types.Any(t => int.Parse(t) == p.Type.ProductTypeId)).ToList();
         }
 
 

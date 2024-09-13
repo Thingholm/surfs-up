@@ -9,31 +9,31 @@ namespace SurfsUpWebApp.Repositories
         {
             new ProductType
             {
-                Id = 1,
+                ProductTypeId = 1,
                 Name = "Shortboard",
                 ImageUrl = "category-1.jpg"
             },
             new ProductType
             {
-                Id = 2,
+                ProductTypeId = 2,
                 Name = "Funboard",
                 ImageUrl = "s326152794241300969_p327_i17_w1168.png"
             },
             new ProductType
             {
-                Id = 3,
+                ProductTypeId = 3,
                 Name = "Fish",
                 ImageUrl = "surfboard4.png"
             },
             new ProductType
             {
-                Id = 4,
+                ProductTypeId = 4,
                 Name = "Longboard",
                 ImageUrl = "s326152794241300969_p285_i27_w333.jpeg" 
             },
             new ProductType
             {
-                Id = 5,
+                ProductTypeId = 5,
                 Name = "SUP",
                 ImageUrl = "category-3.jpg"
             }
