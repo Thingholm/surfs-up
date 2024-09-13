@@ -10,7 +10,7 @@ using SurfsUpWebApp.Models;
 namespace SurfsUpWebApp.Migrations
 {
     [DbContext(typeof(AppDataContext))]
-    [Migration("20240913095631_InitialCreate")]
+    [Migration("20240913102142_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
