@@ -10,8 +10,11 @@ namespace SurfsUpWebApp
         {
             var builder = WebApplication.CreateBuilder(args);
             var connecionString = builder.Configuration.GetConnectionString("Products") ?? "Data Source = Products.db";
+            var connecionString2 = builder.Configuration.GetConnectionString("CartItems") ?? "Data Source = CartItems.db";
+            
             //builder.Services.AddDbContext<CartItemDb>(options => options.UseInMemoryDatabase("items"));
             builder.Services.AddSqlite<ProductDb>(connecionString);
+            builder.Services.AddSqlite<CartItemDb>(connecionString2);
 
             builder.Services.AddEndpointsApiExplorer();
             

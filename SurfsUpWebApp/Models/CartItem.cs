@@ -17,7 +17,7 @@ namespace SurfsUpWebApp.Models
 
     class CartItemDb : DbContext 
     {
-        public CartItemDb(DbContextOptions options) : base(options) {}
+        public CartItemDb(DbContextOptions<CartItemDb> options) : base(options) {}
         public DbSet<CartItem> CartItems { get; set; } = null!;
     }
 }
