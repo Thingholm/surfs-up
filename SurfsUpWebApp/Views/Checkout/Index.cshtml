@@ -26,6 +26,44 @@
 
 
 <h1>Kontaktoplysninger</h1>
-<section>
-    
+<section class="form-section">
+    <form action="post">
+        <div class="row" id="name">
+            <div class="input-container">
+                <label for="firstname">Fornavn</label>
+                <input type="text" name="firstname" placeholder="Fornavn...">
+            </div>
+            <div class="input-container">
+                <label for="lastname">Efternavn</label>
+                <input type="text" name="lastname" placeholder="Efternavn...">
+            </div>
+        </div>
+        <div class="row" id="contact">
+            <div class="input-container">
+                <label for="mail">Email</label>
+                <input type="email" name="mail" placeholder="Eksempel@mail.com...">
+            </div>
+            <div class="input-container">
+                <label for="phonenumber">Telefon</label>
+                <input type="tel" name="phonenumber" placeholder="+45 01 23 45 67">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-container">
+                <label for="address">Adresse</label>
+                <input type="text" name="address" placeholder="Vejnavn 1...">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-container">
+                <label for="zip-code">Postnummer</label>
+                <input type="text" name="zip-code" placeholder="1234">
+            </div>
+            <div class="input-container">
+                <label for="city">By</label>
+                <input type="text" name="city" placeholder="Bynavn...">
+            </div>
+        </div>
+        <button class="btn primary contained">Videre til betaling</button>
+    </form>
 </section>

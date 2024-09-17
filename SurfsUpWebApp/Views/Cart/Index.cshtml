@@ -84,22 +84,15 @@
         <form 
             method="post" 
             class="calendar-form"
+            asp-action="GoToCheckout"
         >
+            <div asp-validation-summary="ModelOnly"></div>
             <input 
-                type="text" 
+                type="date" 
                 id="date-input" 
-                readonly 
                 placeholder="Vælg en dato"
+                name="Date"
             >
-            <div 
-                class="calendar-container" 
-                id="calendar-container" 
-                style="display: none;"
-            >
-                <select id="month"></select>
-                <div id="calendar" class="calendar">
-                </div>
-            </div>
             <button class="btn contained primary">
                 Videre til betaling
             </button>

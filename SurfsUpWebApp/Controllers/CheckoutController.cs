@@ -4,7 +4,7 @@ namespace SurfsUpWebApp.Controllers
 {
     public class CheckoutController : Controller
     {
-        [Route("kurv/checkout")]
+        [Route("kurv/kontaktoplysninger")]
         public IActionResult Index()
         {
             return View();

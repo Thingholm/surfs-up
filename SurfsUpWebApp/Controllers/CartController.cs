@@ -44,5 +44,13 @@ namespace SurfsUpWebApp.Controllers
             }
             return RedirectToAction("Index");
         }
+        [HttpPost("kurv/checkout")]
+        public IActionResult GoToCheckout(DateTime date){
+            if (ModelState.IsValid)
+            {
+                return Redirect("/kurv/checkout");
+            }
+            return RedirectToAction("Index");
+        }
     }
 }
