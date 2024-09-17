@@ -81,16 +81,28 @@
         <p class="intermediate"><span>Levering</span><span>+ €@(0.ToString("N2"))</span></p>
         <p class="intermediate"><span>Moms <span>25%</span></span><span>+ €@vat.ToString("N2")</span></p>
         <p class="total"><span>Total</span><span>€@total.ToString("N2")</span></p>
-        <form method="post" class="calendar-form">
-            <input type="text" id="date-input" readonly placeholder="Vælg en dato">
-            <div class="calendar-container" id="calendar-container" style="display: none;">
+        <form 
+            method="post" 
+            class="calendar-form"
+        >
+            <input 
+                type="text" 
+                id="date-input" 
+                readonly 
+                placeholder="Vælg en dato"
+            >
+            <div 
+                class="calendar-container" 
+                id="calendar-container" 
+                style="display: none;"
+            >
                 <select id="month"></select>
                 <div id="calendar" class="calendar">
                 </div>
             </div>
+            <button class="btn contained primary">
+                Videre til betaling
+            </button>
         </form>
-        <button class="btn contained primary">
-            Videre til betaling
-        </button>
     </div>
 </section>
