@@ -965,3 +965,36 @@ form >div{
     height: 100px !important;
     width: auto !important;
 }
+
+.calendar-container{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 24px 32px;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0px 0px 5px 2px #0000000f;
+}
+
+.calendar{
+    text-align: center;
+}
+
+.calendar th{
+    opacity: 0.4;
+    font-weight: 400;
+    padding: 4px 8px;
+}
+
+.calendar td{
+    padding: 12px;
+    border-radius: 99px;
+    transition: 0.1s;
+}
+
+
+
+.calendar td.selected{
+    background-color: #00a6fb;
+    color: #ffffff;
+}
