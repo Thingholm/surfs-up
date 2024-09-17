@@ -1,3 +1,5 @@
+using EntityFramework.Infrastructure;
+using EntityFramework.Models;
 using Microsoft.AspNetCore.Mvc;
 using SurfsUpWebApp.Models;
 using SurfsUpWebApp.Repositories;
@@ -8,24 +10,26 @@ namespace SurfsUpWebApp.Controllers
     public class ProductsController : Controller
     {
         private readonly CartItemRepository _cartItemRepository;
-        public ProductsController(CartItemRepository cartItemRepository)
+        private readonly AppDbContext _dbContext;
+        public ProductsController(CartItemRepository cartItemRepository, AppDbContext dbContext)
         {
             _cartItemRepository = cartItemRepository;
+            _dbContext = dbContext;
         }
 
         [Route("produkter")]
         public IActionResult Index(string? types, string? sortBy)
         {
-            List<ProductType> productTypes = ProductTypeRepository.GetAllTypes();
+            List<ProductType> productTypes = _dbContext.ProductTypes.ToList();
             List<Product>? products;
             if (types == null)
             {
-                products = ProductRepository.GetAllProducts();
+                products = _dbContext.Products.ToList();
             }
             else
             {
                 string[] typeList = types.Contains(",") ? types.Split(",") : [types];
-                products = ProductRepository.GetProductsByTypes(typeList);
+                products = _dbContext.Products.Where(p => typeList.Any(pt => int.Parse(pt) == p.ProductTypeId)).ToList();
             }
 
             if (sortBy != null && products != null){
@@ -52,7 +56,7 @@ namespace SurfsUpWebApp.Controllers
         [Route("produkter/{id}/{name?}")]
         public IActionResult Product(int id, string? name)
         {
-            Product? product = ProductRepository.GetProductById(id);
+            Product? product = _dbContext.Products.FirstOrDefault(p => p.Id == id);
             if (product != null)
             {
                 if (name == null)
@@ -68,7 +72,7 @@ namespace SurfsUpWebApp.Controllers
         [HttpPost]
         public IActionResult AddToCart(int ProductId, int Amount)
         {
-            Product? product = ProductRepository.GetProductById(ProductId);
+            Product? product = _dbContext.Products.FirstOrDefault(p => p.Id == ProductId);
             if (product != null)
             {
                 CartItem cartItem = new CartItem
@@ -81,7 +85,7 @@ namespace SurfsUpWebApp.Controllers
                 _cartItemRepository.AddCartItem(cartItem);
             }
 
-            return RedirectToAction("Product", new { id = ProductId, name = StringFormatter.GenerateUrlSlug(ProductRepository.GetProductById(ProductId).Name) });
+            return RedirectToAction("Product", new { id = ProductId, name = StringFormatter.GenerateUrlSlug(_dbContext.Products.FirstOrDefault(p => p.Id == ProductId).Name) });
         }
     }
 }

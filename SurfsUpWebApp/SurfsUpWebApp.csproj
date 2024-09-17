@@ -13,4 +13,8 @@
     <Folder Include="wwwroot\Style\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EntityFramework\EntityFramework.csproj" />
+  </ItemGroup>
+
 </Project>

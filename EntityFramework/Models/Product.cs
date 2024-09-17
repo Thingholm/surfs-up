@@ -1,4 +1,10 @@
-﻿namespace SurfsUpWebApp.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EntityFramework.Models
 {
     public class Product
     {
@@ -8,15 +14,11 @@
         public double Width { get; set; }
         public double Thickness { get; set; }
         public double Volume { get; set; }
-        public ProductType Type { get; set; }
         public double Price { get; set; }
+        public int ProductTypeId { get; set; }
+        public ProductType ProductType { get; set; }
         public List<string> Equipment { get; set; }
         public string ImageUrl { get; set; }
 
-        public override string ToString()
-        {
-            return $"Id: {Id}, Name: {Name}, Length: {Length}, Width: {Width}, Thickness: {Thickness}, Volume: {Volume}, Type: {Type}, Price: {Price}";
-        }
     }
 }
-        

@@ -1,4 +1,5 @@
 using System.Xml.Linq;
+using EntityFramework.Models;
 
 namespace SurfsUpWebApp.Models
 {

@@ -1,4 +1,9 @@
+using EntityFramework.Infrastructure;
+using EntityFramework.Models;
+
+//using SurfsUpWebApp.Models;
 using SurfsUpWebApp.Repositories;
+using System;
 
 namespace SurfsUpWebApp
 {
@@ -11,6 +16,8 @@ namespace SurfsUpWebApp
             builder.Services.AddSingleton<CartItemRepository>();
 
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<AppDbContext>();
 
             var app = builder.Build();
 
