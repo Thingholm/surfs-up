@@ -6,10 +6,14 @@ namespace SurfsUpWebApp.Models
     {
         public DbSet<CartItem> CartItems { get; set; }
         public DbSet<Product> Products { get; set; }
-        //public DbSet<ProductType> ProductTypes { get; set; }   
+        public DbSet<ProductType> ProductTypes { get; set; }   
 
         public AppDataContext(DbContextOptions<AppDataContext> options) : base(options) {}
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>().ToTable("Product");
+        }
     }
 
 }

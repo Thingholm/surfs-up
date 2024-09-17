@@ -1,6 +1,7 @@
-using SurfsUpWebApp.Repositories;
-using Microsoft.OpenApi.Models;
 using SurfsUpWebApp.Models;
+using Microsoft.EntityFrameworkCore;
+using SurfsUpWebApp.Data;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace SurfsUpWebApp
 {
@@ -9,35 +10,36 @@ namespace SurfsUpWebApp
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var connecionString = builder.Configuration.GetConnectionString("SurfsUpDatabase") ?? "Data Source = AppDataContext.db";
-            
-            
-            //builder.Services.AddDbContext<CartItemDb>(options => options.UseInMemoryDatabase("items"));
-            builder.Services.AddSqlite<AppDataContext>(connecionString);
-            
 
-            builder.Services.AddEndpointsApiExplorer();
-            
+            // Retrieve connection string from the configuration
+            var connectionString = builder.Configuration.GetConnectionString("SurfsUpContext");
 
-            //builder.Services.AddSingleton<CartItemRepository>();
-            builder.Services.AddScoped<CartItemRepository>();
-            
+            // Pass the connection string to the DbContext
+            builder.Services.AddDbContext<AppDataContext>(options => options.UseSqlite(connectionString));
 
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
 
+            using (var scope = app.Services.CreateScope())
+            {
+                try
+                {
+                    var context = scope.ServiceProvider.GetRequiredService<AppDataContext>();
+                    if (context.Database.EnsureCreated())
+                    {
+                        Seeddata.Initialize(context); // Ensure seeding if database was just created
+                    }
+                }
+                catch (System.Exception ex)
+                {
+                    var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+                    logger.LogError(ex, "An error occurred creating the DB.");
+                }
+            }
+
             app.UseStaticFiles();
-
             app.UseRouting();
-
-            // app.MapGet("/addexample", async (AppDataContext db ) => {
-            //     var examples = ProductRepository.GetAllProducts();
-            //     examples.ForEach((s) => { db.Products.Add(s);
-            //     });
-                
-            //     await db.SaveChangesAsync();
-            //  });
 
             app.MapControllerRoute(
                 name: "default",
@@ -45,6 +47,7 @@ namespace SurfsUpWebApp
             );
 
             app.Run();
+
         }
     }
 }
