@@ -100,7 +100,7 @@ const weekDays = ["ma", "ti", "on", "to", "fr", "lø", "sø"];
 const months = ["Januar", "Februar", "Marts", "April", "Maj", "Juni", "Juli", "August", "September", "Oktober", "November", "December"];
 
 dateInput.addEventListener("click", () => {
-    calendarContainer.style.display == "none" ? calendarContainer.style.display = "block" : calendarContainer.style.display = "none"
+    calendarContainer.style.display == "none" ? calendarContainer.style.display = "inline-block" : calendarContainer.style.display = "none"
 })
 
 function buildCalendar(month, year) {
