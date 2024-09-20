@@ -4,7 +4,7 @@ namespace EntityFramework.Models
     {
         public int Id { get; set;}
         public int BoardId { get; set;}
-        public Product product { get; set;}
+        public Product Product { get; set;}
         public int UserId { get; set;}
     }
 }
