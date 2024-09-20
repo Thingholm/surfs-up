@@ -1,6 +1,7 @@
 using EntityFramework.Infrastructure;
 using EntityFramework.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace SurfsUpWebApp.Controllers
@@ -17,7 +18,7 @@ namespace SurfsUpWebApp.Controllers
             List<RentedBoard>? rentedBoards;
             try 
             {
-                rentedBoards = _dbContext.RentedBoards.ToList();
+                rentedBoards = _dbContext.RentedBoards.Include(p => p.Product).ToList();
             }
             catch (Exception ex) 
             {
