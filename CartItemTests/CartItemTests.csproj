@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EntityFramework\EntityFramework.csproj" />
     <ProjectReference Include="..\SurfsUpWebApp\SurfsUpWebApp.csproj" />
   </ItemGroup>
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ namespace EntityFramework.Models
         public double Thickness { get; set; }
         public double Volume { get; set; }
         public double Price { get; set; }
+        [ForeignKey("ProductType")]
         public int ProductTypeId { get; set; }
         public ProductType ProductType { get; set; }
         public List<string> Equipment { get; set; }

@@ -1,5 +1,5 @@
 using SurfsUpWebApp.Repositories;
-using SurfsUpWebApp.Models;
+using EntityFramework.Models;
 using CartItem = SurfsUpWebApp.Models.CartItem;
 
 namespace CartItemTests
@@ -24,7 +24,7 @@ namespace CartItemTests
                 Width = 21.0,
                 Thickness = 2.75,
                 Volume = 38.8,
-                Type =             new ProductType
+                ProductType =             new ProductType
                 {
                     Id = 1,
                     Name = "Shortboard",
@@ -65,7 +65,7 @@ namespace CartItemTests
                 Width = 21.0,
                 Thickness = 2.75,
                 Volume = 38.8,
-                Type =             new ProductType
+                ProductType =             new ProductType
                 {
                     Id = 1,
                     Name = "Shortboard",
@@ -110,7 +110,7 @@ namespace CartItemTests
                 Width = 21.0,
                 Thickness = 2.75,
                 Volume = 38.8,
-                Type =             new ProductType
+                ProductType =             new ProductType
                 {
                     Id = 1,
                     Name = "Shortboard",
@@ -152,7 +152,7 @@ namespace CartItemTests
                 Width = 21.0,
                 Thickness = 2.75,
                 Volume = 38.8,
-                Type =             new ProductType
+                ProductType =             new ProductType
                 {
                     Id = 1,
                     Name = "Shortboard",
@@ -204,7 +204,7 @@ namespace CartItemTests
                 Width = 21.0,
                 Thickness = 2.75,
                 Volume = 38.8,
-                Type =             new ProductType
+                ProductType =             new ProductType
                 {
                     Id = 1,
                     Name = "Shortboard",
