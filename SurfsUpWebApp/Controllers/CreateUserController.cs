@@ -36,11 +36,28 @@ namespace SurfsUpWebApp.Controllers
                     ModelState.AddModelError("", "skriv email og kode");
 
                 }
-
+                return View();
 
             }
             return View(model);
 
+        }
+        [HttpPost]
+        public IActionResult Login(Login login)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = _context.Users.Where(x=>x.Email == login.Email & x.Password == login.Password).FirstOrDefault();
+                if (user != null)
+                {
+                    // success
+                }
+                else {
+                    ModelState.AddModelError("", "Forkert kodeord !!");
+                }
+            }
+
+            return View(login);
         }
 
 
