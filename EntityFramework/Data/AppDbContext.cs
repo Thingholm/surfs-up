@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EntityFramework.Models;
+using EntityFramework.Members;
+
 
 namespace EntityFramework.Infrastructure
 {
@@ -12,7 +14,8 @@ namespace EntityFramework.Infrastructure
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductType> ProductTypes { get; set; }
-        public DbSet<RentedBoard> RentedBoards { get; set; }
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<User> Users { get; set; }
 
         public string DbPath { get; set; }
 

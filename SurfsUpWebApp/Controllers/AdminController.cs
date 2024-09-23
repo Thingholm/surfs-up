@@ -1,31 +1,49 @@
-using EntityFramework.Infrastructure;
-using EntityFramework.Models;
+﻿using System;
 using Microsoft.AspNetCore.Mvc;
+using SurfsUpWebApp.Models;
+using EntityFramework.Infrastructure;
+using EntityFramework.Members;
+using EntityFramework.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-
-namespace SurfsUpWebApp.Controllers
+public class AdminController : Controller
 {
-    public class AdminController : Controller
-    {
-        private readonly AppDbContext _dbContext;
-        public AdminController(AppDbContext dbContext) 
-        {
-            _dbContext = dbContext;
-        }
-        public IActionResult Index() 
-        {
-            List<RentedBoard>? rentedBoards;
-            try 
-            {
-                rentedBoards = _dbContext.RentedBoards.Include(p => p.Product).ToList();
-            }
-            catch (Exception ex) 
-            {
-                rentedBoards = null;
-            }
+    private readonly AppDbContext _context;
 
-            return View(rentedBoards);
-        }
+    public AdminController(AppDbContext appDbContext)
+    {
+        _context = appDbContext;
     }
+
+	
+
+    [HttpPost]
+    public IActionResult Registration(CreateAdmin model)
+    {
+        if (ModelState.IsValid)
+        {
+            Admin admin = new Admin();
+            admin.Email = model.Email;
+            admin.Password = model.Password;
+            try
+            {
+                _context.Admins.Add(admin);
+             _context.SaveChanges();
+             ModelState.Clear();
+
+            }
+            catch(DbUpdateException ex)
+            {
+                ModelState.AddModelError("", "skriv email og kode");
+
+            }
+            
+
+        }
+        return View(model);
+
+    }
+   // public IActionResult Login()
+    
 }

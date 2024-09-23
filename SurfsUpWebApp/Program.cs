@@ -1,6 +1,8 @@
 using EntityFramework.Data;
 using EntityFramework.Infrastructure;
 using EntityFramework.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+
 
 //using SurfsUpWebApp.Models;
 using SurfsUpWebApp.Repositories;
@@ -22,6 +24,7 @@ namespace SurfsUpWebApp
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddDbContext<AppDbContext>();
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 
 
             var app = builder.Build();
