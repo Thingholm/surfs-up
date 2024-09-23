@@ -1,17 +1,19 @@
 ﻿using EntityFramework.Infrastructure;
 using EntityFramework.Members;
 using EntityFramework.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SurfsUpWebApp.Models;
 using SurfsUpWebApp.Repositories;
+using System.Security.Claims;
 
 namespace SurfsUpWebApp.Controllers
 {
-    public class CreateUserController : Controller
+    public class UserController : Controller
     {
         private readonly AppDbContext _context;
-        public CreateUserController(AppDbContext appContext)
+        public UserController(AppDbContext appContext)
         {
             _context = appContext;
         }
@@ -42,6 +44,11 @@ namespace SurfsUpWebApp.Controllers
             return View(model);
 
         }
+        public IActionResult Index()
+        {
+            return View(_context.Users.ToList());
+        }
+
         [HttpPost]
         public IActionResult Login(Login login)
         {
@@ -50,7 +57,17 @@ namespace SurfsUpWebApp.Controllers
                 var user = _context.Users.Where(x=>x.Email == login.Email & x.Password == login.Password).FirstOrDefault();
                 if (user != null)
                 {
-                    // success
+                    // create cookie
+
+                    var claims = new List<Claim>();
+                    {
+                        new Claim(ClaimTypes.Name, user.Email);
+                        new Claim("Name", user.Name);
+                        new Claim(ClaimTypes.Role, "User");
+
+                    };
+                    
+
                 }
                 else {
                     ModelState.AddModelError("", "Forkert kodeord !!");
@@ -60,11 +77,19 @@ namespace SurfsUpWebApp.Controllers
             return View(login);
         }
 
+        [Authorize]
+        public IActionResult SecurePage()
+        {
+            ViewBag.Name = HttpContext.User.Identity.Name;
+        return View();
+        }
 
+
+            //  List<Product>? products = _dbContext.Products.Take(4).ToList();
+           // return View(products);
     }
 
-          //  List<Product>? products = _dbContext.Products.Take(4).ToList();
-           // return View(products);
+          
         }
     
 
