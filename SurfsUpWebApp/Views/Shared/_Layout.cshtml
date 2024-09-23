@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surf's Up - Produkter</title>
+    <title>SurfsUp - @ViewData["Title"] </title>
     <link rel="stylesheet" href="/Style/style.css" asp-append-version="true">
     <link rel="icon" href="/Images/Skærmbillede 2024-08-23 092940.png">
 </head>
@@ -34,6 +34,9 @@
                 </li>
                 <li>
                     <a href="/kontakt" class="nav-item @(ViewContext.HttpContext.Request.Path == "/kontakt" ? "current" : "")" id="contact">Kontakt</a>
+                </li>
+                <li>
+                    <a href="/Login" class="nav-item @(pathName.Contains("/Login") ? "current" : "")" id="Login">Login</a>
                 </li>
                 <li>
                     <button onclick="location.href='/kurv';" class="btn contained primary">

@@ -1,6 +1,7 @@
 using EntityFramework.Infrastructure;
 using EntityFramework.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SurfsUpWebApp.Models;
 using SurfsUpWebApp.Repositories;
 using SurfsUpWebApp.Utils;
@@ -28,8 +29,8 @@ namespace SurfsUpWebApp.Controllers
             }
             else
             {
-                string[] typeList = types.Contains(",") ? types.Split(",") : [types];
-                products = _dbContext.Products.Where(p => typeList.Any(pt => int.Parse(pt) == p.ProductTypeId)).ToList();
+                List<int> typeList = types.Contains(",") ? types.Split(",").Select(x => int.Parse(x)).ToList() : new List<int>() { 1 };
+                products = _dbContext.Products.Where(p => typeList.Any(pt => pt == p.ProductTypeId)).ToList();
             }
 
             if (sortBy != null && products != null){
@@ -56,7 +57,7 @@ namespace SurfsUpWebApp.Controllers
         [Route("produkter/{id}/{name?}")]
         public IActionResult Product(int id, string? name)
         {
-            Product? product = _dbContext.Products.FirstOrDefault(p => p.Id == id);
+            Product? product = _dbContext.Products.Include(p => p.ProductType).FirstOrDefault(p => p.Id == id);
             if (product != null)
             {
                 if (name == null)
