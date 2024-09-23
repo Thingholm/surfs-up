@@ -31,6 +31,7 @@ namespace SurfsUpWebApp.Controllers
                     _context.Users.Add(user);
                     _context.SaveChanges();
                     ModelState.Clear();
+                    ViewBag.Message = $"{user.Name} nu er du registreret";
 
                 }
                 catch (DbUpdateException ex)
