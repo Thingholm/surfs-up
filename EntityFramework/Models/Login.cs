@@ -8,6 +8,6 @@ namespace EntityFramework.Models
 {
     public class Login
     {
-
+        
     }
 }
