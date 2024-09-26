@@ -3,7 +3,7 @@ using SurfsUpWebApp.Models;
 namespace SurfsUpWebApp.Repositories
 {
     public class CartItemRepository
-    { 
+    {
         private List<CartItem> cartItems = new List<CartItem>();
 
         public void AddCartItem(CartItem cartItem)
@@ -11,30 +11,30 @@ namespace SurfsUpWebApp.Repositories
             cartItems.Add(cartItem);
         }
 
-        public List<CartItem> GetAllCartItems() 
+        public List<CartItem> GetAllCartItems()
         {
             if (cartItems == null || cartItems.Count < 1)
             {
                 return null;
             }
-            
+
             return cartItems;
-            
         }
+
         public CartItem? GetCartItemById(int id)
         {
             return cartItems.FirstOrDefault(item => item.Id == id);
         }
 
-        public void UpdateCartItemAmount(int cartItemId, int amount) 
+        public void UpdateCartItemAmount(int cartItemId, int amount)
         {
-             if(cartItemId == null || amount < 0)
+            if (cartItemId == null || amount < 0)
                 return;
 
             CartItem cartItemToBeUpdated = cartItems.FirstOrDefault(x => x.Id == cartItemId);
             if (cartItemToBeUpdated == null)
                 return;
-            
+
             cartItemToBeUpdated.Amount = amount;
         }
 
