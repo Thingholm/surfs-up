@@ -31,8 +31,10 @@ namespace SurfsUpWebApp
                 try
                 {
                     var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-                    Seeddata.Initialize(context);
-
+                    if (context.Database.EnsureCreated())
+                    {
+                        Seeddata.Initialize(context);
+                    }
                 }
                 catch (System.Exception ex)
                 {

@@ -78,25 +78,6 @@ namespace EntityFramework.Migrations
                     b.ToTable("ProductTypes");
                 });
 
-            modelBuilder.Entity("EntityFramework.Models.RentedBoard", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("RentedBoards");
-                });
-
             modelBuilder.Entity("EntityFramework.Models.Product", b =>
                 {
                     b.HasOne("EntityFramework.Models.ProductType", "ProductType")
@@ -106,17 +87,6 @@ namespace EntityFramework.Migrations
                         .IsRequired();
 
                     b.Navigation("ProductType");
-                });
-
-            modelBuilder.Entity("EntityFramework.Models.RentedBoard", b =>
-                {
-                    b.HasOne("EntityFramework.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
                 });
 #pragma warning restore 612, 618
         }
